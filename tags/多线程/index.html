@@ -1994,7 +1994,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1725893207724),
+    lastupdate: new Date(1725949887403),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2307,7 +2307,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/24/Qt 子线程Qxlsx读写Excel练习/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/24/Qt 实现多线程的几种方式/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="cvhao's library">
   </span>
@@ -2325,23 +2325,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/04/24/Qt%20%E5%AD%90%E7%BA%BF%E7%A8%8BQxlsx%E8%AF%BB%E5%86%99Excel%E7%BB%83%E4%B9%A0/"  itemprop="url">
+      <a href="/2023/04/24/Qt%20%E5%AE%9E%E7%8E%B0%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/"  itemprop="url">
         Qt 实现多线程
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-        发展史
-version-4.6以前，只能继承QThread来实现
-version-4.6以后，官方推荐使用继承QObject 来实现
-
-Qthread 存在的问题：方法一：继承QthreadStep1. 需要创建一个线程类的子类，让其继承QT中的线程类QThread，比如：
-1234class MyThread:public QThread&#123;    ......&#125;
-
-st...
-      
+      <p>1，继承Qthread ,重写run方法。</p>
     
   </div>
   
@@ -2361,7 +2352,7 @@ st...
       </div>
       
         <div>
-          <a class='readmore' href='/2023/04/24/Qt%20%E5%AD%90%E7%BA%BF%E7%A8%8BQxlsx%E8%AF%BB%E5%86%99Excel%E7%BB%83%E4%B9%A0/' itemprop="url">
+          <a class='readmore' href='/2023/04/24/Qt%20%E5%AE%9E%E7%8E%B0%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/' itemprop="url">
             Read More
           </a>
         </div>

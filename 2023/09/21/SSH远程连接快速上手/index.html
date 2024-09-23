@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2023/09/21/ssh 远程免密连接/"/>
+  <link rel="canonical" href="http://example.com/2023/09/21/ssh远程连接快速上手/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,19 +34,22 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>cvhao's library</title>
+  <title>SSH远程连接快速上手 - cvhao's library</title>
   <meta name="keywords" content="null">
-  <meta desc name="description" content="haolees blogs - haolee - cvhao's library">
+  <meta desc name="description" content="ssh user@ip
+
+SSH 协议通过对网络数据进行加密和验证， 在不安全的网络环境中提供了安全的登录和其他安全网络服务。
+ - haolee - cvhao's library">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="cvhao&#39;s library">
-<meta property="og:url" content="http://example.com/2023/09/21/ssh%20%E8%BF%9C%E7%A8%8B%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/index.html">
+<meta property="og:title" content="SSH远程连接快速上手">
+<meta property="og:url" content="http://example.com/2023/09/21/SSH%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/index.html">
 <meta property="og:site_name" content="cvhao&#39;s library">
-<meta property="og:description" content="ssh 远程免密连接 SSH 协议通过对网络数据进行加密和验证， 在不安全的网络环境中提供了安全的登录和其他安全网络服务。  什么叫SSH？原理详解，看这一篇就够了！-ssh的原理 (51cto.com) 配置ssh 免密登录的原理： 把你本地的公钥添加到服务器的～&#x2F;.ssh&#x2F;authorized_keys文件里 【小知识】第6期 SSH免密登录的原理_哔哩哔哩_bilibil">
+<meta property="og:description" content="ssh user@ip  SSH 协议通过对网络数据进行加密和验证， 在不安全的网络环境中提供了安全的登录和其他安全网络服务。">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-09-21T10:02:25.850Z">
-<meta property="article:modified_time" content="2024-09-22T15:37:35.431Z">
+<meta property="article:modified_time" content="2024-09-23T04:58:17.304Z">
 <meta property="article:author" content="haolee">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1988,7 +1991,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -1996,7 +1999,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1727053380711),
+    lastupdate: new Date(1727067515059),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2293,7 +2296,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/09/21/ssh 远程免密连接/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/09/21/SSH远程连接快速上手/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="cvhao's library">
   </span>
@@ -2313,28 +2316,108 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
     
-      <span hidden itemprop="name headline">
+      <h1 class="title" itemprop="name headline">
+        SSH远程连接快速上手
+      </h1>
+      <div class='new-meta-box'>
         
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://raw.githubusercontent.com/conf-haolee/Images/master/PicGoImg/202407291825516.ico" class="lazyload" data-srcset="https://raw.githubusercontent.com/conf-haolee/Images/master/PicGoImg/202407291825516.ico" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">李浩同学</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  
+  
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/">速查手册</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/" itemprop="url"><span itemprop="name">速查手册</span></a>
       </span>
+    
+  </div>
+  
+
+
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-09-21T18:02:25+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Sep 21, 2023</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
     
   </div>
 
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="ssh-远程免密连接"><a href="#ssh-远程免密连接" class="headerlink" title="ssh 远程免密连接"></a>ssh 远程免密连接</h1><blockquote>
+    <p><code>ssh user@ip</code></p>
+<blockquote>
 <p>SSH 协议通过对网络数据进行加密和验证， 在不安全的网络环境中提供了安全的登录和其他安全网络服务。</p>
 </blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.51cto.com/article/706122.html">什么叫SSH？原理详解，看这一篇就够了！-ssh的原理 (51cto.com)</a></p>
+<span id="more"></span>
+
+<h1 id="SSH-远程连接快速上手"><a href="#SSH-远程连接快速上手" class="headerlink" title="SSH 远程连接快速上手"></a>SSH 远程连接快速上手</h1><h2 id="01-SSH-基础知识"><a href="#01-SSH-基础知识" class="headerlink" title="01 SSH 基础知识"></a>01 SSH 基础知识</h2><!--SSH(Secure Shell)是一种加密的网络通信协议。-->
+
+<p><strong>SSH 的主要作用：</strong></p>
+<ol>
+<li>远程登录</li>
+<li>数据传输</li>
+<li>密钥认证</li>
+</ol>
+<p>以及隧道传输、端口转发、回话管理。</p>
+<p><strong>通信模式： 服务器-客户端模式(Server-Client)</strong></p>
+<img src="https://raw.githubusercontent.com/conf-haolee/Images/master/uPic/5a527e3afe03bf5a8e6d0b3679505ff8.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/conf-haolee/Images/master/uPic/5a527e3afe03bf5a8e6d0b3679505ff8.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="5a527e3afe03bf5a8e6d0b3679505ff8" style="zoom:50%;" />
+
+<h2 id="02-SSH-别名登录"><a href="#02-SSH-别名登录" class="headerlink" title="02 SSH 别名登录"></a>02 SSH 别名登录</h2><p>使用别名登录方式, 需要打开～&#x2F;.ssh&#x2F;config， 追加以下内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Host raspberrypi   			 #这里是别名</span><br><span class="line">  HostName 192.169.31.48  #这里是服务器IP【注意这里开头空两格不是tab键】</span><br><span class="line">  User haolee							#这里是用户名</span><br></pre></td></tr></table></figure>
+
+<p><code>raspberrypi</code>是<code>haolee@192.168.31.48</code>的别名</p>
+<h2 id="03-SSH-远程免密连接"><a href="#03-SSH-远程免密连接" class="headerlink" title="03 SSH 远程免密连接"></a>03 SSH 远程免密连接</h2><img src="https://raw.githubusercontent.com/conf-haolee/Images/master/uPic/55cb7d88c3a91dea5d91abf26f590e2c_720.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/conf-haolee/Images/master/uPic/55cb7d88c3a91dea5d91abf26f590e2c_720.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="55cb7d88c3a91dea5d91abf26f590e2c_720" style="zoom:50%;" />
+
 <p>配置ssh 免密登录的原理：</p>
 <p>把你本地的公钥添加到服务器的～&#x2F;.ssh&#x2F;authorized_keys文件里</p>
+<blockquote>
 <p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1y4411q7PW/?spm_id_from=333.1007.top_right_bar_window_history.content.click">【小知识】第6期 SSH免密登录的原理_哔哩哔哩_bilibili</a></p>
-<p>step1: 在本地生成密钥</p>
-<p><code>ssh-keygen</code></p>
-<p>step2: </p>
-<p>连接上服务器</p>
-<p>进入  <code>cd ~</code></p>
-<p>.ssh</p>
+<p><a target="_blank" rel="noopener" href="https://www.51cto.com/article/706122.html">什么叫SSH？原理详解，看这一篇就够了！-ssh的原理 (51cto.com)</a></p>
+</blockquote>
+<p>step1: 在本地生成密钥 <code>ssh-keygen</code></p>
+<p>step2: 连接上服务器，进入  <code>cd ~</code> 打开<code>.ssh/authorized_keys</code>，追加客户端下<code>id-rsa.pub</code>文件内容进去。</p>
+<p><strong>快捷命令</strong>:  <code>ssh-copy-id</code></p>
+<p>可能遇到的问题</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/zhouzhihao/p/17087666.html">解决：powershell无法使用ssh-copy-id命令 - octal_zhihao - 博客园 (cnblogs.com)</a></p>
+<h2 id="04-基于SSH命令行文件传输"><a href="#04-基于SSH命令行文件传输" class="headerlink" title="04 基于SSH命令行文件传输"></a>04 基于SSH命令行文件传输</h2><blockquote>
+<p>引用：</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Fep2e2EFr/?share_source=copy_web&vd_source=2b642316ba0d5f71a2bf75410183788c">SSH+免密登陆+VSCode远程开发+GitHub免密</a></p>
 
   </div>
   
@@ -2359,10 +2442,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-09-22T23:37:35+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-09-23T12:58:17+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Sep 22, 2024</p>
+    <p>更新于：Sep 23, 2024</p>
   </a>
 </div>
 
@@ -2381,7 +2464,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/09/21/ssh%20%E8%BF%9C%E7%A8%8B%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/&title= - cvhao's library&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/09/21/SSH%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/&title=SSH远程连接快速上手 - cvhao's library&summary=ssh user@ip
+
+SSH 协议通过对网络数据进行加密和验证， 在不安全的网络环境中提供了安全的登录和其他安全网络服务。
+"
           
           >
           
@@ -2393,7 +2479,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/09/21/ssh%20%E8%BF%9C%E7%A8%8B%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/&title= - cvhao's library&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/09/21/SSH%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/&title=SSH远程连接快速上手 - cvhao's library&summary=ssh user@ip
+
+SSH 协议通过对网络数据进行加密和验证， 在不安全的网络环境中提供了安全的登录和其他安全网络服务。
+"
           
           >
           
@@ -2405,7 +2494,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/09/21/ssh%20%E8%BF%9C%E7%A8%8B%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/&title= - cvhao's library&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/09/21/SSH%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/&title=SSH远程连接快速上手 - cvhao's library&summary=ssh user@ip
+
+SSH 协议通过对网络数据进行加密和验证， 在不安全的网络环境中提供了安全的登录和其他安全网络服务。
+"
           
           >
           
@@ -2440,10 +2532,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/2023/12/25/01%20%E3%80%90%E5%B7%A5%E4%BD%9C%E3%80%91Logbook/%E6%96%87%E4%BB%B6%E4%B8%8E%E6%96%87%E4%BB%B6%E5%A4%B9%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>文件与文件夹命名规范</p>
-          <p class='content'>MECE法则：相互独立、完全穷尽**”，即所谓的 “无重复、无遗漏”
+          <p class='content'>MECE法则：相互独立、完全穷尽”，即所谓的 “无重复、无遗漏”
 
 
-文件与文件夹命名规范1）文件命名规范命名结构：项目命名词（或项目编号）+文件命名词+文件作者+日期+版本号.文件后缀例如...</p>
+文件与文件夹命名规范1）文件命名规范命名结构：项目命名词（或项目编号）+文件命名词+文件作者+日期+版本号.文件后缀例如：2...</p>
         </a>
       
       
@@ -2472,7 +2564,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2023/09/21/ssh%20%E8%BF%9C%E7%A8%8B%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2023/09/21/SSH%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2514,7 +2606,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <div class='content'>
-      
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#01-SSH-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-text">01 SSH 基础知识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#02-SSH-%E5%88%AB%E5%90%8D%E7%99%BB%E5%BD%95"><span class="toc-text">02 SSH 别名登录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#03-SSH-%E8%BF%9C%E7%A8%8B%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5"><span class="toc-text">03 SSH 远程免密连接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#04-%E5%9F%BA%E4%BA%8ESSH%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93"><span class="toc-text">04 基于SSH命令行文件传输</span></a></li></ol>
   </div>
 </section>
 
@@ -3007,7 +3099,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"cvhao's library","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"haolee","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"haolees blogs"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"cvhao's library"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/09/21/ssh 远程免密连接/"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"cvhao's library","url":"http://example.com/","keywords":null,"description":"haolees blogs","author":{"@type":"Person","name":"haolee","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"haolees blogs"},"publisher":{"@type":"Organization","name":"cvhao's library","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"haolees blogs","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/09/21/ssh%20%E8%BF%9C%E7%A8%8B%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/"},"author":{"@type":"Person","name":"haolee","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"cvhao's library","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/09/21/ssh%20%E8%BF%9C%E7%A8%8B%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/","wordCount":0,"datePublished":"2023-09-21T10:02:25.850Z","dateModified":"2024-09-22T15:37:35.431Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"cvhao's library","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"haolee","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"haolees blogs"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"cvhao's library"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/速查手册/","name":"速查手册"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/09/21/SSH远程连接快速上手/","name":"SSH远程连接快速上手"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"cvhao's library","url":"http://example.com/","keywords":null,"description":"haolees blogs","author":{"@type":"Person","name":"haolee","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"haolees blogs"},"publisher":{"@type":"Organization","name":"cvhao's library","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"SSH远程连接快速上手","description":"ssh user@ip\n\nSSH 协议通过对网络数据进行加密和验证， 在不安全的网络环境中提供了安全的登录和其他安全网络服务。\n","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/09/21/SSH%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/"},"author":{"@type":"Person","name":"haolee","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"cvhao's library","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/09/21/SSH%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/","wordCount":64,"datePublished":"2023-09-21T10:02:25.850Z","dateModified":"2024-09-23T04:58:17.304Z","articleSection":"速查手册","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

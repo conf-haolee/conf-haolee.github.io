@@ -36,18 +36,17 @@
   <!-- 页面元数据 -->
   <title>blender小零件下落场景构建，以及图片自动生成python实现 - cvhao's library</title>
   <meta name="keywords" content="blender,python,null">
-  <meta desc name="description" content="import bpy
+  <meta desc name="description" content="
+
  - haolee - cvhao's library">
-  
-<meta property="og:type" content="article">
+  <meta property="og:type" content="article">
 <meta property="og:title" content="blender小零件下落场景构建，以及图片自动生成python实现">
 <meta property="og:url" content="http://example.com/2024/09/27/blender%E5%B0%8F%E9%9B%B6%E4%BB%B6%E4%B8%8B%E8%90%BD%E5%9C%BA%E6%99%AF%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90python%E5%AE%9E%E7%8E%B0/index.html">
 <meta property="og:site_name" content="cvhao&#39;s library">
-<meta property="og:description" content="import bpy">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-09-26T16:49:56.246Z">
-<meta property="article:modified_time" content="2024-10-16T16:08:55.238Z">
+<meta property="article:modified_time" content="2024-10-16T16:15:50.642Z">
 <meta property="article:author" content="haolee">
 <meta property="article:tag" content="blender">
 <meta property="article:tag" content="python">
@@ -2162,7 +2161,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1729094944312),
+    lastupdate: new Date(1729096148135),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2576,11 +2575,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <pre><code>import bpy
-</code></pre>
-<span id="more"></span>
+    <div align="center">
+<img src= https://raw.githubusercontent.com/conf-haolee/Images/master/uPic/b615e75751a43d5acab43b14f849b749.png width=400px />
+</div>
 
-<img src="https://raw.githubusercontent.com/conf-haolee/Images/master/uPic/b615e75751a43d5acab43b14f849b749.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/conf-haolee/Images/master/uPic/b615e75751a43d5acab43b14f849b749.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="b615e75751a43d5acab43b14f849b749" style="zoom:50%;" />
+<span id="more"></span>
 
 <blockquote>
 <p>参考代码</p>
@@ -2603,10 +2602,12 @@ bpy.ops.object.shade_smooth()
 #bpy.context.object.modifiers[&quot;简易形变&quot;].angle = 0.174533  # rad(10)
 
 # new camera
-bpy.ops.object.camera_add(enter_editmode=False, align=&#39;VIEW&#39;, location=(6, 0, 6), rotation=(1.5708, 0, 1.5708), scale=(1, 1, 1))
+bpy.ops.object.camera_add(enter_editmode=False, align=&#39;VIEW&#39;, location=(6, 0, 6), 
+                          rotation=(1.5708, 0, 1.5708), scale=(1, 1, 1))
 
 # add a plane
-bpy.ops.mesh.primitive_plane_add(size=2, enter_editmode=False, align=&#39;WORLD&#39;, location=(0, 0, 8), scale=(1, 1, 1))
+bpy.ops.mesh.primitive_plane_add(size=2, enter_editmode=False, align=&#39;WORLD&#39;, 
+                                 location=(0, 0, 8), scale=(1, 1, 1))
 bpy.context.object.scale[0] = -0.6
 bpy.context.object.scale[1] = -2
 bpy.context.object.scale[2] = -4.3
@@ -2631,7 +2632,8 @@ light_material = bpy.data.materials[-1]
 light_material.node_tree.nodes[&quot;原理化BSDF&quot;].inputs[27].default_value = 9
 
 # new a light
-bpy.ops.mesh.primitive_plane_add(enter_editmode=False, align=&#39;WORLD&#39;, location=(-3, 0, 6), rotation=(3.14159, -1.5708, 0), scale=(2.4, 4.0, 1.0))
+bpy.ops.mesh.primitive_plane_add(enter_editmode=False, align=&#39;WORLD&#39;, location=(-3, 0, 6), 
+                                 rotation=(3.14159, -1.5708, 0), scale=(2.4, 4.0, 1.0))
 bpy.context.object.scale[0] = 2.4
 bpy.context.object.scale[1] = 4
 # apply light_material
@@ -2681,7 +2683,7 @@ for frame_i in range(10,50):
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-10-17T00:08:55+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-10-17T00:15:50+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Oct 17, 2024</p>
@@ -2710,7 +2712,8 @@ for frame_i in range(10,50):
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2024/09/27/blender%E5%B0%8F%E9%9B%B6%E4%BB%B6%E4%B8%8B%E8%90%BD%E5%9C%BA%E6%99%AF%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90python%E5%AE%9E%E7%8E%B0/&title=blender小零件下落场景构建，以及图片自动生成python实现 - cvhao's library&summary=import bpy
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2024/09/27/blender%E5%B0%8F%E9%9B%B6%E4%BB%B6%E4%B8%8B%E8%90%BD%E5%9C%BA%E6%99%AF%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90python%E5%AE%9E%E7%8E%B0/&title=blender小零件下落场景构建，以及图片自动生成python实现 - cvhao's library&summary=
+
 "
           
           >
@@ -2723,7 +2726,8 @@ for frame_i in range(10,50):
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2024/09/27/blender%E5%B0%8F%E9%9B%B6%E4%BB%B6%E4%B8%8B%E8%90%BD%E5%9C%BA%E6%99%AF%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90python%E5%AE%9E%E7%8E%B0/&title=blender小零件下落场景构建，以及图片自动生成python实现 - cvhao's library&summary=import bpy
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2024/09/27/blender%E5%B0%8F%E9%9B%B6%E4%BB%B6%E4%B8%8B%E8%90%BD%E5%9C%BA%E6%99%AF%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90python%E5%AE%9E%E7%8E%B0/&title=blender小零件下落场景构建，以及图片自动生成python实现 - cvhao's library&summary=
+
 "
           
           >
@@ -2736,7 +2740,8 @@ for frame_i in range(10,50):
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2024/09/27/blender%E5%B0%8F%E9%9B%B6%E4%BB%B6%E4%B8%8B%E8%90%BD%E5%9C%BA%E6%99%AF%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90python%E5%AE%9E%E7%8E%B0/&title=blender小零件下落场景构建，以及图片自动生成python实现 - cvhao's library&summary=import bpy
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2024/09/27/blender%E5%B0%8F%E9%9B%B6%E4%BB%B6%E4%B8%8B%E8%90%BD%E5%9C%BA%E6%99%AF%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90python%E5%AE%9E%E7%8E%B0/&title=blender小零件下落场景构建，以及图片自动生成python实现 - cvhao's library&summary=
+
 "
           
           >
@@ -3479,7 +3484,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"cvhao's library","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"haolee","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"haolees blogs"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"cvhao's library"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/编程学习/","name":"编程学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/09/27/blender小零件下落场景自动生成python实现/","name":"blender小零件下落场景构建，以及图片自动生成python实现"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"cvhao's library","url":"http://example.com/","keywords":null,"description":"haolees blogs","author":{"@type":"Person","name":"haolee","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"haolees blogs"},"publisher":{"@type":"Organization","name":"cvhao's library","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"blender小零件下落场景构建，以及图片自动生成python实现","description":"import bpy\n","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/09/27/blender%E5%B0%8F%E9%9B%B6%E4%BB%B6%E4%B8%8B%E8%90%BD%E5%9C%BA%E6%99%AF%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90python%E5%AE%9E%E7%8E%B0/"},"author":{"@type":"Person","name":"haolee","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"cvhao's library","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/09/27/blender%E5%B0%8F%E9%9B%B6%E4%BB%B6%E4%B8%8B%E8%90%BD%E5%9C%BA%E6%99%AF%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90python%E5%AE%9E%E7%8E%B0/","wordCount":11,"datePublished":"2024-09-26T16:49:56.246Z","dateModified":"2024-10-16T16:08:55.238Z","articleSection":"编程学习","keywords":"blender,python","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"cvhao's library","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"haolee","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"haolees blogs"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"cvhao's library"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/编程学习/","name":"编程学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/09/27/blender小零件下落场景自动生成python实现/","name":"blender小零件下落场景构建，以及图片自动生成python实现"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"cvhao's library","url":"http://example.com/","keywords":null,"description":"haolees blogs","author":{"@type":"Person","name":"haolee","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"haolees blogs"},"publisher":{"@type":"Organization","name":"cvhao's library","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"blender小零件下落场景构建，以及图片自动生成python实现","description":"\n\n","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/09/27/blender%E5%B0%8F%E9%9B%B6%E4%BB%B6%E4%B8%8B%E8%90%BD%E5%9C%BA%E6%99%AF%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90python%E5%AE%9E%E7%8E%B0/"},"author":{"@type":"Person","name":"haolee","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"cvhao's library","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/09/27/blender%E5%B0%8F%E9%9B%B6%E4%BB%B6%E4%B8%8B%E8%90%BD%E5%9C%BA%E6%99%AF%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90python%E5%AE%9E%E7%8E%B0/","wordCount":2,"datePublished":"2024-09-26T16:49:56.246Z","dateModified":"2024-10-16T16:15:50.642Z","articleSection":"编程学习","keywords":"blender,python","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

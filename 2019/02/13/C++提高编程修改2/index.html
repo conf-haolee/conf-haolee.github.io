@@ -2160,7 +2160,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1731065513485),
+    lastupdate: new Date(1731066032581),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -9293,15 +9293,20 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  
+  // 代码高亮部分的css样式
+
+  <script>volantis.css("https://unpkg.com/@highlightjs/cdn-assets@11.5.1/styles/default.min.css");</script>
+
+// 代码高亮部分的js，在这里加入引入的代码行号的js文件
 
   
 <script src="https://unpkg.com/@highlightjs/cdn-assets@11.5.1/highlight.min.js"></script>
 
-  <script src="https://unpkg.com/highlightjs-line-numbers.js@2.8.0/dist/highlightjs-line-numbers.min.js"></script>
+  <script src="https://npm.elemecdn.com/highlightjs-line-numbers.js@2.8.0/dist/highlightjs-line-numbers.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
   <script>hljs.initLineNumbersOnLoad({ singleLine: true });</script>
   
+  <script>volantis.requestAnimationFrame(hljs.highlightAll)</script>
   <script>
   volantis.pjax.push(()=>{
       document.querySelectorAll('pre code').forEach((block) => {
@@ -9310,6 +9315,20 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
       });
   },"highlightjs")
   </script>
+// 这里是原本拷贝代码按键的部分，只是更改了一下书写格式，好让它不在编辑器里面报太多错
+
+<script>
+  function pjax_highlightjs_copyCode(){
+    if (!(document.querySelector(".highlight .code pre") ||
+      document.querySelector(".article pre code"))) {
+      return;
+    }
+    VolantisApp.copyCode(".highlight .code pre, .article pre code")
+  }
+  volantis.requestAnimationFrame(pjax_highlightjs_copyCode)
+  volantis.pjax.push(pjax_highlightjs_copyCode)
+</script>
+
 
 
 

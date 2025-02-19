@@ -46,7 +46,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-09-22T14:50:51.361Z">
-<meta property="article:modified_time" content="2024-10-15T11:59:14.901Z">
+<meta property="article:modified_time" content="2025-02-19T03:58:25.825Z">
 <meta property="article:author" content="haolee">
 <meta property="article:tag" content="CV">
 <meta name="twitter:card" content="summary">
@@ -2160,7 +2160,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1732096889786),
+    lastupdate: new Date(1739937513279),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2577,12 +2577,401 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <p>常见的图像识别任务包括图像分类(Image Classification)、目标检测(Object Detection)、语义分割(Semantic Segmentation)和实例分割(Instance Segmentation)。</p>
 <span id="more"></span>
 
-<h1 id="计算机视觉的常见任务"><a href="#计算机视觉的常见任务" class="headerlink" title="计算机视觉的常见任务"></a>计算机视觉的常见任务</h1><p><img src="/Users/lihao/Library/Containers/com.tencent.qq/Data/Library/Application%20Support/QQ/nt_qq_fcea03749759666b45cbd668fcd69017/nt_data/Pic/2024-09/Ori/b427a8e4b3ce86218d054aab39078edc.png" class="lazyload" data-srcset="/Users/lihao/Library/Containers/com.tencent.qq/Data/Library/Application%20Support/QQ/nt_qq_fcea03749759666b45cbd668fcd69017/nt_data/Pic/2024-09/Ori/b427a8e4b3ce86218d054aab39078edc.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="b427a8e4b3ce86218d054aab39078edc"></p>
-<h2 id="a-图像分类"><a href="#a-图像分类" class="headerlink" title="a 图像分类"></a>a 图像分类</h2><p>经典数据集</p>
+<h1 id="计算机视觉的常见任务"><a href="#计算机视觉的常见任务" class="headerlink" title="计算机视觉的常见任务"></a>计算机视觉的常见任务</h1><p>经典数据集</p>
 <p>MNIST数据集</p>
 <p>ImageNet数据集</p>
 <p>CIFAR-10&#x2F;100数据集</p>
-<h2 id="b-目标检测"><a href="#b-目标检测" class="headerlink" title="b 目标检测"></a>b 目标检测</h2><h2 id="c-语义分割"><a href="#c-语义分割" class="headerlink" title="c 语义分割"></a>c 语义分割</h2><h2 id="d-实例分割"><a href="#d-实例分割" class="headerlink" title="d 实例分割"></a>d 实例分割</h2>
+<h2 id="1-图像分类-Image-Classification"><a href="#1-图像分类-Image-Classification" class="headerlink" title="1. 图像分类 (Image Classification)"></a>1. <strong>图像分类 (Image Classification)</strong></h2><h4 id="原理："><a href="#原理：" class="headerlink" title="原理："></a>原理：</h4><p>图像分类任务的目的是将输入图像分配到预定义的类别中。常见的算法是卷积神经网络（CNN），它通过卷积层自动提取图像的局部特征，再通过全连接层进行分类。</p>
+<h4 id="伪代码："><a href="#伪代码：" class="headerlink" title="伪代码："></a>伪代码：</h4><pre><code>python
+
+
+复制编辑
+# 伪代码：图像分类
+def image_classification(image):
+    # 数据预处理：缩放、归一化等
+    preprocessed_image = preprocess(image)
+    
+    # 定义CNN模型
+    model = create_cnn_model()
+
+    # 使用训练好的模型进行预测
+    predicted_class = model.predict(preprocessed_image)
+    return predicted_class
+</code></pre>
+<h4 id="Python代码实现-使用Keras-："><a href="#Python代码实现-使用Keras-：" class="headerlink" title="Python代码实现 (使用Keras)："></a>Python代码实现 (使用Keras)：</h4><pre><code>python
+
+
+复制编辑
+import keras
+from keras.models import Sequential
+from keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
+from keras.preprocessing import image
+import numpy as np
+
+# 加载预训练模型（如VGG16）
+model = keras.applications.VGG16(weights=&#39;imagenet&#39;)
+
+# 加载图像并预处理
+img_path = &#39;path_to_image.jpg&#39;  # 输入图片路径
+img = image.load_img(img_path, target_size=(224, 224))
+img_array = image.img_to_array(img)
+img_array = np.expand_dims(img_array, axis=0)
+img_array = keras.applications.vgg16.preprocess_input(img_array)
+
+# 使用模型进行预测
+predictions = model.predict(img_array)
+
+# 输出预测结果
+decoded_predictions = keras.applications.vgg16.decode_predictions(predictions)
+print(decoded_predictions)
+</code></pre>
+<hr>
+<h2 id="2-目标检测-Object-Detection"><a href="#2-目标检测-Object-Detection" class="headerlink" title="2. 目标检测 (Object Detection)"></a>2. <strong>目标检测 (Object Detection)</strong></h2><h4 id="原理：-1"><a href="#原理：-1" class="headerlink" title="原理："></a>原理：</h4><p>目标检测不仅需要分类物体，还需要在图像中定位物体的具体位置。通常使用区域提议网络（RPN）和分类网络的组合。常见的模型有YOLO（You Only Look Once）和Faster R-CNN。</p>
+<h4 id="伪代码：-1"><a href="#伪代码：-1" class="headerlink" title="伪代码："></a>伪代码：</h4><pre><code>python
+
+
+复制编辑
+# 伪代码：目标检测
+def object_detection(image):
+    # 数据预处理：图像缩放、归一化等
+    preprocessed_image = preprocess(image)
+    
+    # 使用目标检测模型（如YOLO）
+    model = create_yolo_model()
+
+    # 检测图像中的物体
+    bounding_boxes, class_labels = model.detect_objects(preprocessed_image)
+    return bounding_boxes, class_labels
+</code></pre>
+<h4 id="Python代码实现-使用YOLO模型-："><a href="#Python代码实现-使用YOLO模型-：" class="headerlink" title="Python代码实现 (使用YOLO模型)："></a>Python代码实现 (使用YOLO模型)：</h4><pre><code>python
+
+
+复制编辑
+import cv2
+import numpy as np
+
+# 加载预训练的YOLO模型
+net = cv2.dnn.readNet(&quot;yolov3.weights&quot;, &quot;yolov3.cfg&quot;)
+layer_names = net.getLayerNames()
+output_layers = [layer_names[i - 1] for i in net.getUnconnectedOutLayers()]
+
+# 读取图像
+img = cv2.imread(&#39;image.jpg&#39;)
+height, width, channels = img.shape
+
+# 预处理图像
+blob = cv2.dnn.blobFromImage(img, 0.00392, (416, 416), (0, 0, 0), True, crop=False)
+net.setInput(blob)
+outs = net.forward(output_layers)
+
+# 解析输出并绘制检测框
+for out in outs:
+    for detection in out:
+        scores = detection[5:]
+        class_id = np.argmax(scores)
+        confidence = scores[class_id]
+        if confidence &gt; 0.5:
+            center_x = int(detection[0] * width)
+            center_y = int(detection[1] * height)
+            w = int(detection[2] * width)
+            h = int(detection[3] * height)
+            cv2.rectangle(img, (center_x, center_y), (center_x + w, center_y + h), (0, 255, 0), 2)
+
+# 显示检测结果
+cv2.imshow(&#39;Detected Image&#39;, img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+</code></pre>
+<hr>
+<h2 id="3-图像分割-Image-Segmentation"><a href="#3-图像分割-Image-Segmentation" class="headerlink" title="3. 图像分割 (Image Segmentation)"></a>3. <strong>图像分割 (Image Segmentation)</strong></h2><h4 id="原理：-2"><a href="#原理：-2" class="headerlink" title="原理："></a>原理：</h4><p>图像分割的任务是将图像分成多个有意义的区域，每个区域对应图像中的一个物体或部分。常见的分割方法包括语义分割和实例分割，深度学习中常用U-Net和Mask R-CNN模型。</p>
+<h4 id="伪代码：-2"><a href="#伪代码：-2" class="headerlink" title="伪代码："></a>伪代码：</h4><pre><code>python
+
+
+复制编辑
+# 伪代码：图像分割
+def image_segmentation(image):
+    # 数据预处理
+    preprocessed_image = preprocess(image)
+    
+    # 加载分割模型（如U-Net）
+    model = create_unet_model()
+
+    # 进行图像分割
+    segmentation_mask = model.predict(preprocessed_image)
+    return segmentation_mask
+</code></pre>
+<h4 id="Python代码实现-使用U-Net模型-："><a href="#Python代码实现-使用U-Net模型-：" class="headerlink" title="Python代码实现 (使用U-Net模型)："></a>Python代码实现 (使用U-Net模型)：</h4><pre><code>python
+
+
+复制编辑
+from tensorflow.keras.models import load_model
+import numpy as np
+import cv2
+
+# 加载预训练的U-Net模型
+model = load_model(&#39;unet_model.h5&#39;)
+
+# 读取图像并预处理
+img = cv2.imread(&#39;image.jpg&#39;, cv2.IMREAD_GRAYSCALE)
+img = cv2.resize(img, (256, 256))
+img = np.expand_dims(img, axis=-1)
+img = img / 255.0
+
+# 预测分割结果
+segmentation_result = model.predict(np.expand_dims(img, axis=0))
+
+# 显示分割结果
+segmentation_mask = segmentation_result[0, :, :, 0]  # 只取第一个通道
+cv2.imshow(&#39;Segmentation Mask&#39;, segmentation_mask)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+</code></pre>
+<hr>
+<h2 id="4-人脸识别-Face-Recognition"><a href="#4-人脸识别-Face-Recognition" class="headerlink" title="4. 人脸识别 (Face Recognition)"></a>4. <strong>人脸识别 (Face Recognition)</strong></h2><h4 id="原理：-3"><a href="#原理：-3" class="headerlink" title="原理："></a>原理：</h4><p>人脸识别是通过检测图像中的人脸并对其进行身份验证或识别。常见的算法有Haar特征分类器、HOG+SVM以及基于深度学习的FaceNet和OpenFace。</p>
+<h4 id="伪代码：-3"><a href="#伪代码：-3" class="headerlink" title="伪代码："></a>伪代码：</h4><pre><code>python
+
+
+复制编辑
+# 伪代码：人脸识别
+def face_recognition(image):
+    # 使用预训练的模型检测人脸
+    faces = detect_faces(image)
+    
+    # 对每个人脸进行识别
+    for face in faces:
+        identity = recognize_face(face)
+    return identity
+</code></pre>
+<h4 id="Python代码实现-使用OpenCV和dlib-："><a href="#Python代码实现-使用OpenCV和dlib-：" class="headerlink" title="Python代码实现 (使用OpenCV和dlib)："></a>Python代码实现 (使用OpenCV和dlib)：</h4><pre><code>python
+
+
+复制编辑
+import cv2
+import dlib
+
+# 加载人脸检测器和人脸识别模型
+detector = dlib.get_frontal_face_detector()
+predictor = dlib.shape_predictor(&#39;shape_predictor_68_face_landmarks.dat&#39;)
+face_rec_model = dlib.face_recognition_model_v1(&#39;dlib_face_recognition_resnet_model_v1.dat&#39;)
+
+# 读取图像
+img = cv2.imread(&#39;image.jpg&#39;)
+
+# 检测人脸
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+faces = detector(gray)
+
+# 获取并识别人脸特征
+for face in faces:
+    landmarks = predictor(gray, face)
+    face_descriptor = face_rec_model.compute_face_descriptor(img, landmarks)
+    print(face_descriptor)
+</code></pre>
+<hr>
+<h2 id="5-姿态估计-Pose-Estimation"><a href="#5-姿态估计-Pose-Estimation" class="headerlink" title="5. 姿态估计 (Pose Estimation)"></a>5. <strong>姿态估计 (Pose Estimation)</strong></h2><h4 id="原理：-4"><a href="#原理：-4" class="headerlink" title="原理："></a>原理：</h4><p>姿态估计的任务是预测图像中人体或物体的关键点位置，常用于人类动作分析。OpenPose和PoseNet是比较常用的姿态估计算法。</p>
+<h4 id="伪代码：-4"><a href="#伪代码：-4" class="headerlink" title="伪代码："></a>伪代码：</h4><pre><code>python
+
+
+复制编辑
+# 伪代码：姿态估计
+def pose_estimation(image):
+    # 加载姿态估计模型
+    model = load_pose_estimation_model()
+    
+    # 对图像进行姿态估计
+    keypoints = model.estimate_pose(image)
+    return keypoints
+</code></pre>
+<h4 id="Python代码实现-使用OpenPose-："><a href="#Python代码实现-使用OpenPose-：" class="headerlink" title="Python代码实现 (使用OpenPose)："></a>Python代码实现 (使用OpenPose)：</h4><pre><code>python
+
+
+复制编辑
+import cv2
+import pyopenpose as op
+
+# 初始化OpenPose
+params = &#123;&#39;model_folder&#39;: &#39;models/&#39;&#125;
+opWrapper = op.WrapperPython()
+opWrapper.configure(params)
+opWrapper.start()
+
+# 读取图像
+img = cv2.imread(&#39;image.jpg&#39;)
+
+# 进行姿态估计
+datum = op.Datum()
+datum.cvInputData = img
+opWrapper.emplaceAndPop([datum])
+
+# 显示结果
+cv2.imshow(&#39;Pose Estimation&#39;, datum.cvOutputData)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+</code></pre>
+<hr>
+<h2 id="6-图像超分辨率-Image-Super-Resolution"><a href="#6-图像超分辨率-Image-Super-Resolution" class="headerlink" title="6. 图像超分辨率 (Image Super-Resolution)"></a>6. <strong>图像超分辨率 (Image Super-Resolution)</strong></h2><h4 id="原理：-5"><a href="#原理：-5" class="headerlink" title="原理："></a>原理：</h4><p>图像超分辨率任务的目的是将低分辨率的图像转换为高分辨率图像。常用的算法包括SRCNN、VDSR等，它们通常使用深度学习模型来生成细节。</p>
+<h4 id="伪代码：-5"><a href="#伪代码：-5" class="headerlink" title="伪代码："></a>伪代码：</h4><pre><code>python
+
+
+复制编辑
+# 伪代码：图像超分辨率
+def image_super_resolution(image):
+    # 数据预处理
+    preprocessed_image = preprocess(image)
+    
+    # 加载超分辨率模型
+    model = load_sr_model()
+
+    # 进行超分辨率处理
+    high_res_image = model.predict(preprocessed_image)
+    return high_res_image
+</code></pre>
+<h4 id="Python代码实现-使用ESRGAN-："><a href="#Python代码实现-使用ESRGAN-：" class="headerlink" title="Python代码实现 (使用ESRGAN)："></a>Python代码实现 (使用ESRGAN)：</h4><h4 id="Python代码实现-使用ESRGAN-：-1"><a href="#Python代码实现-使用ESRGAN-：-1" class="headerlink" title="Python代码实现 (使用ESRGAN)："></a>Python代码实现 (使用ESRGAN)：</h4><pre><code>python
+
+
+复制编辑
+import torch
+from model import ESRGAN  # 假设你有ESRGAN模型定义
+
+# 加载预训练模型
+model = ESRGAN()
+model.load_state_dict(torch.load(&#39;esrgan.pth&#39;))
+model.eval()
+
+# 读取低分辨率图像
+lr_image = cv2.imread(&#39;low_res_image.jpg&#39;)
+
+# 转换为PyTorch张量并进行预处理
+lr_image_tensor = torch.from_numpy(lr_image).float().permute(2, 0, 1).unsqueeze(0) / 255.0
+
+# 使用ESRGAN进行超分辨率处理
+with torch.no_grad():
+    sr_image_tensor = model(lr_image_tensor)
+
+# 转换回图像格式并显示
+sr_image = sr_image_tensor.squeeze(0).permute(1, 2, 0).numpy() * 255.0
+sr_image = sr_image.astype(np.uint8)
+cv2.imshow(&#39;Super Resolution&#39;, sr_image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+</code></pre>
+<h2 id="7-光流估计-Optical-Flow-Estimation"><a href="#7-光流估计-Optical-Flow-Estimation" class="headerlink" title="7. 光流估计 (Optical Flow Estimation)"></a>7. <strong>光流估计 (Optical Flow Estimation)</strong></h2><h4 id="原理：-6"><a href="#原理：-6" class="headerlink" title="原理："></a>原理：</h4><p>光流估计用于分析视频中物体的运动，它估计的是像素在连续帧之间的位移。在运动分析、视频稳定、目标跟踪等领域有重要应用。常用的算法有Lucas-Kanade方法和Farneback方法。</p>
+<h4 id="伪代码：-6"><a href="#伪代码：-6" class="headerlink" title="伪代码："></a>伪代码：</h4><pre><code>python
+
+
+复制编辑
+# 伪代码：光流估计
+def optical_flow_estimation(prev_image, next_image):
+    # 使用光流算法计算图像间的像素位移
+    flow = calculate_optical_flow(prev_image, next_image)
+    return flow
+</code></pre>
+<h4 id="Python代码实现-使用OpenCV的Farneback方法-："><a href="#Python代码实现-使用OpenCV的Farneback方法-：" class="headerlink" title="Python代码实现 (使用OpenCV的Farneback方法)："></a>Python代码实现 (使用OpenCV的Farneback方法)：</h4><pre><code>python
+
+
+复制编辑
+import cv2
+import numpy as np
+
+# 读取前后两帧图像
+prev_frame = cv2.imread(&#39;frame1.jpg&#39;, cv2.IMREAD_GRAYSCALE)
+next_frame = cv2.imread(&#39;frame2.jpg&#39;, cv2.IMREAD_GRAYSCALE)
+
+# 计算光流（Farneback方法）
+flow = cv2.calcOpticalFlowFarneback(prev_frame, next_frame, None, 0.5, 3, 15, 3, 5, 1.2, 0)
+
+# 显示光流
+magnitude, angle = cv2.cartToPolar(flow[..., 0], flow[..., 1])
+flow_image = np.zeros_like(prev_frame)
+flow_image[..., 0] = angle * 180 / np.pi / 2
+flow_image[..., 1] = cv2.normalize(magnitude, None, 0, 255, cv2.NORM_MINMAX)
+flow_image[..., 2] = 255
+
+# 显示结果
+cv2.imshow(&#39;Optical Flow&#39;, flow_image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+</code></pre>
+<hr>
+<h3 id="8-图像描述与生成-Image-Captioning"><a href="#8-图像描述与生成-Image-Captioning" class="headerlink" title="8. 图像描述与生成 (Image Captioning)"></a>8. <strong>图像描述与生成 (Image Captioning)</strong></h3><h4 id="原理：-7"><a href="#原理：-7" class="headerlink" title="原理："></a>原理：</h4><p>图像描述任务是根据图像生成自然语言描述。该任务通常结合卷积神经网络（CNN）和循环神经网络（RNN）或Transformer模型。CNN用于从图像中提取特征，而RNN&#x2F;Transformer用于生成图像的描述。</p>
+<h4 id="伪代码：-7"><a href="#伪代码：-7" class="headerlink" title="伪代码："></a>伪代码：</h4><pre><code>python
+
+
+复制编辑
+# 伪代码：图像描述生成
+def image_captioning(image):
+    # 提取图像特征
+    image_features = extract_features(image)
+
+    # 使用RNN或Transformer生成描述
+    caption = generate_caption(image_features)
+    return caption
+</code></pre>
+<h4 id="Python代码实现-使用预训练模型-："><a href="#Python代码实现-使用预训练模型-：" class="headerlink" title="Python代码实现 (使用预训练模型)："></a>Python代码实现 (使用预训练模型)：</h4><pre><code>python
+
+
+复制编辑
+import tensorflow as tf
+from tensorflow.keras.preprocessing import image
+import numpy as np
+
+# 加载预训练的图像描述模型（例如Show and Tell模型）
+model = tf.keras.models.load_model(&#39;image_captioning_model.h5&#39;)
+
+# 加载并预处理图像
+img = image.load_img(&#39;image.jpg&#39;, target_size=(224, 224))
+img_array = image.img_to_array(img)
+img_array = np.expand_dims(img_array, axis=0)
+
+# 提取图像特征
+image_features = model.extract_features(img_array)
+
+# 生成描述
+caption = model.generate_caption(image_features)
+print(caption)
+</code></pre>
+<hr>
+<h2 id="9-文本检测与识别-Text-Detection-and-Recognition"><a href="#9-文本检测与识别-Text-Detection-and-Recognition" class="headerlink" title="9. 文本检测与识别 (Text Detection and Recognition)"></a>9. <strong>文本检测与识别 (Text Detection and Recognition)</strong></h2><h4 id="原理：-8"><a href="#原理：-8" class="headerlink" title="原理："></a>原理：</h4><p>文本检测任务是从图像中定位出文本区域，文本识别任务则是识别文本区域中的具体内容。常见的技术有EAST (Efficient and Accurate Scene Text detector) 和CRNN (Convolutional Recurrent Neural Network)。</p>
+<h4 id="伪代码：-8"><a href="#伪代码：-8" class="headerlink" title="伪代码："></a>伪代码：</h4><pre><code>python
+
+
+复制编辑
+# 伪代码：文本检测与识别
+def text_detection_and_recognition(image):
+    # 使用EAST或其他文本检测方法定位文本区域
+    text_regions = detect_text_regions(image)
+    
+    # 对文本区域进行识别
+    recognized_text = recognize_text_in_regions(text_regions)
+    return recognized_text
+</code></pre>
+<h4 id="Python代码实现-使用OpenCV和EAST文本检测-："><a href="#Python代码实现-使用OpenCV和EAST文本检测-：" class="headerlink" title="Python代码实现 (使用OpenCV和EAST文本检测)："></a>Python代码实现 (使用OpenCV和EAST文本检测)：</h4><pre><code>python
+
+
+复制编辑
+import cv2
+import numpy as np
+
+# 加载EAST模型
+net = cv2.dnn.readNet(&#39;frozen_east_text_detection.pb&#39;)
+
+# 读取输入图像
+image = cv2.imread(&#39;text_image.jpg&#39;)
+height, width = image.shape[:2]
+
+# 预处理图像
+blob = cv2.dnn.blobFromImage(image, 1.0, (width, height), (123.68, 116.78, 103.94), swapRB=True, crop=False)
+net.setInput(blob)
+
+# 获取文本检测结果
+scores, geometry = net.forward([&#39;score1&#39;, &#39;geometry1&#39;])
+
+# 解析结果并绘制文本框
+# 具体的解析过程可参考OpenCV官方文档
+</code></pre>
+<hr>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>这些常见的计算机视觉任务涵盖了从图像处理、目标检测到视频分析等多种应用。通过深度学习技术，尤其是卷积神经网络（CNN）、循环神经网络（RNN）、生成对抗网络（GAN）等，我们可以解决越来越复杂的视觉问题。每个任务都可以通过使用开源框架（如TensorFlow、PyTorch、OpenCV）来实现，部分任务（如图像分类、目标检测）已经有预训练模型可供使用，可以极大简化开发过程。</p>
+
   </div>
   
   
@@ -2606,10 +2995,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-10-15T19:59:14+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-02-19T11:58:25+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Oct 15, 2024</p>
+    <p>更新于：Feb 19, 2025</p>
   </a>
 </div>
 
@@ -2772,7 +3161,7 @@ WSL 待补充
 
 
   <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#a-%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB"><span class="toc-text">a 图像分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#b-%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B"><span class="toc-text">b 目标检测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#c-%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2"><span class="toc-text">c 语义分割</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#d-%E5%AE%9E%E4%BE%8B%E5%88%86%E5%89%B2"><span class="toc-text">d 实例分割</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB-Image-Classification"><span class="toc-text">1. 图像分类 (Image Classification)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%9F%E7%90%86%EF%BC%9A"><span class="toc-text">原理：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%AA%E4%BB%A3%E7%A0%81%EF%BC%9A"><span class="toc-text">伪代码：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Python%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-%E4%BD%BF%E7%94%A8Keras-%EF%BC%9A"><span class="toc-text">Python代码实现 (使用Keras)：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B-Object-Detection"><span class="toc-text">2. 目标检测 (Object Detection)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%9F%E7%90%86%EF%BC%9A-1"><span class="toc-text">原理：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%AA%E4%BB%A3%E7%A0%81%EF%BC%9A-1"><span class="toc-text">伪代码：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Python%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-%E4%BD%BF%E7%94%A8YOLO%E6%A8%A1%E5%9E%8B-%EF%BC%9A"><span class="toc-text">Python代码实现 (使用YOLO模型)：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2-Image-Segmentation"><span class="toc-text">3. 图像分割 (Image Segmentation)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%9F%E7%90%86%EF%BC%9A-2"><span class="toc-text">原理：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%AA%E4%BB%A3%E7%A0%81%EF%BC%9A-2"><span class="toc-text">伪代码：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Python%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-%E4%BD%BF%E7%94%A8U-Net%E6%A8%A1%E5%9E%8B-%EF%BC%9A"><span class="toc-text">Python代码实现 (使用U-Net模型)：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB-Face-Recognition"><span class="toc-text">4. 人脸识别 (Face Recognition)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%9F%E7%90%86%EF%BC%9A-3"><span class="toc-text">原理：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%AA%E4%BB%A3%E7%A0%81%EF%BC%9A-3"><span class="toc-text">伪代码：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Python%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-%E4%BD%BF%E7%94%A8OpenCV%E5%92%8Cdlib-%EF%BC%9A"><span class="toc-text">Python代码实现 (使用OpenCV和dlib)：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%A7%BF%E6%80%81%E4%BC%B0%E8%AE%A1-Pose-Estimation"><span class="toc-text">5. 姿态估计 (Pose Estimation)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%9F%E7%90%86%EF%BC%9A-4"><span class="toc-text">原理：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%AA%E4%BB%A3%E7%A0%81%EF%BC%9A-4"><span class="toc-text">伪代码：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Python%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-%E4%BD%BF%E7%94%A8OpenPose-%EF%BC%9A"><span class="toc-text">Python代码实现 (使用OpenPose)：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E5%9B%BE%E5%83%8F%E8%B6%85%E5%88%86%E8%BE%A8%E7%8E%87-Image-Super-Resolution"><span class="toc-text">6. 图像超分辨率 (Image Super-Resolution)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%9F%E7%90%86%EF%BC%9A-5"><span class="toc-text">原理：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%AA%E4%BB%A3%E7%A0%81%EF%BC%9A-5"><span class="toc-text">伪代码：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Python%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-%E4%BD%BF%E7%94%A8ESRGAN-%EF%BC%9A"><span class="toc-text">Python代码实现 (使用ESRGAN)：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Python%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-%E4%BD%BF%E7%94%A8ESRGAN-%EF%BC%9A-1"><span class="toc-text">Python代码实现 (使用ESRGAN)：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E5%85%89%E6%B5%81%E4%BC%B0%E8%AE%A1-Optical-Flow-Estimation"><span class="toc-text">7. 光流估计 (Optical Flow Estimation)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%9F%E7%90%86%EF%BC%9A-6"><span class="toc-text">原理：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%AA%E4%BB%A3%E7%A0%81%EF%BC%9A-6"><span class="toc-text">伪代码：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Python%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-%E4%BD%BF%E7%94%A8OpenCV%E7%9A%84Farneback%E6%96%B9%E6%B3%95-%EF%BC%9A"><span class="toc-text">Python代码实现 (使用OpenCV的Farneback方法)：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E5%9B%BE%E5%83%8F%E6%8F%8F%E8%BF%B0%E4%B8%8E%E7%94%9F%E6%88%90-Image-Captioning"><span class="toc-text">8. 图像描述与生成 (Image Captioning)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%9F%E7%90%86%EF%BC%9A-7"><span class="toc-text">原理：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%AA%E4%BB%A3%E7%A0%81%EF%BC%9A-7"><span class="toc-text">伪代码：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Python%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-%E4%BD%BF%E7%94%A8%E9%A2%84%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B-%EF%BC%9A"><span class="toc-text">Python代码实现 (使用预训练模型)：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E6%96%87%E6%9C%AC%E6%A3%80%E6%B5%8B%E4%B8%8E%E8%AF%86%E5%88%AB-Text-Detection-and-Recognition"><span class="toc-text">9. 文本检测与识别 (Text Detection and Recognition)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%9F%E7%90%86%EF%BC%9A-8"><span class="toc-text">原理：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%AA%E4%BB%A3%E7%A0%81%EF%BC%9A-8"><span class="toc-text">伪代码：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Python%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-%E4%BD%BF%E7%94%A8OpenCV%E5%92%8CEAST%E6%96%87%E6%9C%AC%E6%A3%80%E6%B5%8B-%EF%BC%9A"><span class="toc-text">Python代码实现 (使用OpenCV和EAST文本检测)：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol></li></ol>
   </div>
 </section>
 
@@ -3389,7 +3778,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"cvhao's library","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"haolee","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"haolees blogs"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"cvhao's library"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/读书笔记/","name":"读书笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/09/22/计算机视觉的常见任务/","name":"计算机视觉的常见任务"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"cvhao's library","url":"http://example.com/","keywords":null,"description":"haolees blogs","author":{"@type":"Person","name":"haolee","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"haolees blogs"},"publisher":{"@type":"Organization","name":"cvhao's library","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"计算机视觉的常见任务","description":"常见的图像识别任务包括图像分类(Image Classification)、目标检测(Object Detection)、语义分割(Semantic Segmentation)和实例分割(Instance Segmentation)。","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/09/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%9A%84%E5%B8%B8%E8%A7%81%E4%BB%BB%E5%8A%A1/"},"author":{"@type":"Person","name":"haolee","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"cvhao's library","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/09/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%9A%84%E5%B8%B8%E8%A7%81%E4%BB%BB%E5%8A%A1/","wordCount":117,"datePublished":"2024-09-22T14:50:51.361Z","dateModified":"2024-10-15T11:59:14.901Z","articleSection":"读书笔记","keywords":"CV","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"cvhao's library","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"haolee","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"haolees blogs"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"cvhao's library"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/读书笔记/","name":"读书笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/09/22/计算机视觉的常见任务/","name":"计算机视觉的常见任务"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"cvhao's library","url":"http://example.com/","keywords":null,"description":"haolees blogs","author":{"@type":"Person","name":"haolee","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"haolees blogs"},"publisher":{"@type":"Organization","name":"cvhao's library","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"计算机视觉的常见任务","description":"常见的图像识别任务包括图像分类(Image Classification)、目标检测(Object Detection)、语义分割(Semantic Segmentation)和实例分割(Instance Segmentation)。","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/09/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%9A%84%E5%B8%B8%E8%A7%81%E4%BB%BB%E5%8A%A1/"},"author":{"@type":"Person","name":"haolee","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"cvhao's library","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/09/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%9A%84%E5%B8%B8%E8%A7%81%E4%BB%BB%E5%8A%A1/","wordCount":117,"datePublished":"2024-09-22T14:50:51.361Z","dateModified":"2025-02-19T03:58:25.825Z","articleSection":"读书笔记","keywords":"CV","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

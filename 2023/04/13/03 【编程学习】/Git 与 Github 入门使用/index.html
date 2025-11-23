@@ -2161,7 +2161,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1756203677080),
+    lastupdate: new Date(1763877784904),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2579,31 +2579,27 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <span id="more"></span>
 
 <h2 id="一-如何将本地的新项目提交到GitHub"><a href="#一-如何将本地的新项目提交到GitHub" class="headerlink" title="一 如何将本地的新项目提交到GitHub"></a>一 如何将本地的新项目提交到GitHub</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/152332683">如何通过git 提交代码到远程仓库？</a></p>
-<h3 id="1-初始化本地仓库"><a href="#1-初始化本地仓库" class="headerlink" title="1.初始化本地仓库"></a>1.初始化本地仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-将所有文件添加到本地仓库（也可添加你所需的文件）"><a href="#2-将所有文件添加到本地仓库（也可添加你所需的文件）" class="headerlink" title="2.将所有文件添加到本地仓库（也可添加你所需的文件）"></a>2.将所有文件添加到本地仓库（也可添加你所需的文件）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-将项目提交到本地git仓库-（“first-commit”-是备注信息）"><a href="#3-将项目提交到本地git仓库-（“first-commit”-是备注信息）" class="headerlink" title="3.将项目提交到本地git仓库 （“first commit” 是备注信息）"></a>3.将项目提交到本地git仓库 （“first commit” 是备注信息）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;first commit&quot;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="4-本地git仓库与远程仓库关联（两种方式：1-https方式；2-SSL方式）"><a href="#4-本地git仓库与远程仓库关联（两种方式：1-https方式；2-SSL方式）" class="headerlink" title="4.本地git仓库与远程仓库关联（两种方式：1.https方式；2.SSL方式）"></a>4.本地git仓库与远程仓库关联（两种方式：1.https方式；2.SSL方式）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://github.com/JianhaoChung/DGL_GCNER.git</span><br></pre></td></tr></table></figure>
-
+<h3 id="1-初始化本地仓库"><a href="#1-初始化本地仓库" class="headerlink" title="1.初始化本地仓库"></a>1.初始化本地仓库</h3><pre><code class="bash">git init
+</code></pre>
+<h3 id="2-将所有文件添加到本地仓库（也可添加你所需的文件）"><a href="#2-将所有文件添加到本地仓库（也可添加你所需的文件）" class="headerlink" title="2.将所有文件添加到本地仓库（也可添加你所需的文件）"></a>2.将所有文件添加到本地仓库（也可添加你所需的文件）</h3><pre><code class="bash">git add .
+</code></pre>
+<h3 id="3-将项目提交到本地git仓库-（“first-commit”-是备注信息）"><a href="#3-将项目提交到本地git仓库-（“first-commit”-是备注信息）" class="headerlink" title="3.将项目提交到本地git仓库 （“first commit” 是备注信息）"></a>3.将项目提交到本地git仓库 （“first commit” 是备注信息）</h3><pre><code class="bash">git commit -m &quot;first commit&quot;
+</code></pre>
+<h3 id="4-本地git仓库与远程仓库关联（两种方式：1-https方式；2-SSL方式）"><a href="#4-本地git仓库与远程仓库关联（两种方式：1-https方式；2-SSL方式）" class="headerlink" title="4.本地git仓库与远程仓库关联（两种方式：1.https方式；2.SSL方式）"></a>4.本地git仓库与远程仓库关联（两种方式：1.https方式；2.SSL方式）</h3><pre><code class="bash">git remote add origin https://github.com/JianhaoChung/DGL_GCNER.git
+</code></pre>
 <p>或</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin  git@github.com:JianhaoChung/DGL_GCNER.git</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-将项目推送到远程仓库"><a href="#5-将项目推送到远程仓库" class="headerlink" title="5.将项目推送到远程仓库"></a>5.将项目推送到远程仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="二-Git更新本地项目上传到github"><a href="#二-Git更新本地项目上传到github" class="headerlink" title="二 Git更新本地项目上传到github"></a>二 Git更新本地项目上传到github</h2><h3 id="1、添加到本地仓库"><a href="#1、添加到本地仓库" class="headerlink" title="1、添加到本地仓库"></a>1、添加到本地仓库</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-添加提交描述"><a href="#2-添加提交描述" class="headerlink" title="2 添加提交描述"></a>2 添加提交描述</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m ‘second commit’</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-提交前先从远程仓库主分支中拉取请求"><a href="#3-提交前先从远程仓库主分支中拉取请求" class="headerlink" title="3 提交前先从远程仓库主分支中拉取请求"></a>3 提交前先从远程仓库主分支中拉取请求</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin master</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-把本地仓库代码提交"><a href="#4-把本地仓库代码提交" class="headerlink" title="4 把本地仓库代码提交"></a>4 把本地仓库代码提交</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash">git remote add origin  git@github.com:JianhaoChung/DGL_GCNER.git
+</code></pre>
+<h3 id="5-将项目推送到远程仓库"><a href="#5-将项目推送到远程仓库" class="headerlink" title="5.将项目推送到远程仓库"></a>5.将项目推送到远程仓库</h3><pre><code class="bash">git push -u origin master
+</code></pre>
+<h2 id="二-Git更新本地项目上传到github"><a href="#二-Git更新本地项目上传到github" class="headerlink" title="二 Git更新本地项目上传到github"></a>二 Git更新本地项目上传到github</h2><h3 id="1、添加到本地仓库"><a href="#1、添加到本地仓库" class="headerlink" title="1、添加到本地仓库"></a>1、添加到本地仓库</h3><pre><code>git add .
+</code></pre>
+<h3 id="2-添加提交描述"><a href="#2-添加提交描述" class="headerlink" title="2 添加提交描述"></a>2 添加提交描述</h3><pre><code>git commit -m ‘second commit’
+</code></pre>
+<h3 id="3-提交前先从远程仓库主分支中拉取请求"><a href="#3-提交前先从远程仓库主分支中拉取请求" class="headerlink" title="3 提交前先从远程仓库主分支中拉取请求"></a>3 提交前先从远程仓库主分支中拉取请求</h3><pre><code>git pull origin master
+</code></pre>
+<h3 id="4-把本地仓库代码提交"><a href="#4-把本地仓库代码提交" class="headerlink" title="4 把本地仓库代码提交"></a>4 把本地仓库代码提交</h3><pre><code>git push -u origin master
+</code></pre>
 <blockquote>
 <p>引用</p>
 </blockquote>
@@ -2720,14 +2716,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2023/04/21/03%20%E3%80%90%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E3%80%91/Qxlsx%20%E5%AE%9E%E7%8E%B0Excel%E8%AF%BB%E5%86%99/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Qxlsx 实现Excel读写</p>
-          <p class='content'>Qxlsx 是一个第三方的Excel文件读写库，使用C++ 与 Qt开发。
-
-
-1. 介绍
-Qxlsx 是一个第三方的Excel文件读写库，使用C++ 与 Qt开发。
-由于QtXlsx2014 ...</p>
+        <a class='prev' href='/2023/04/13/01%20%E3%80%90%E5%B7%A5%E4%BD%9C%E3%80%91Logbook/Hexo%E5%8F%91%E5%B8%83%E6%8C%87%E5%8D%97%E5%8F%8A%E5%85%A5%E9%97%A8/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Hexo发布指南及入门</p>
+          <p class='content'>hexo g  生成静态文件; hexo s  启动服务; hexo d  远程部署
+Welcome to Hexo! This is your very first post. Check d...</p>
         </a>
       
       

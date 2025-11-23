@@ -2161,7 +2161,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1756203677080),
+    lastupdate: new Date(1763877784904),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2590,16 +2590,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h2 id="2-类型命名"><a href="#2-类型命名" class="headerlink" title="2. 类型命名"></a>2. 类型命名</h2><p><strong>总述</strong></p>
 <p>类型名称的每个单词首字母均大写, 不包含下划线: <code>MyExcitingClass</code>, <code>MyExcitingEnum</code>.</p>
 <p>所有类型命名 —— <strong>类, 结构体, 类型定义 (<code>typedef</code>), 枚举, 类型模板参数</strong> —— 均使用相同约定, 即以大写字母开始, 每个单词首字母均大写, 不包含下划线. 例如:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// 类和结构体</span><br><span class="line">class UrlTable &#123; ...</span><br><span class="line">class UrlTableTester &#123; ...</span><br><span class="line">struct UrlTableProperties &#123; ...</span><br><span class="line"></span><br><span class="line">// 类型定义</span><br><span class="line">typedef hash_map&lt;UrlTableProperties *, string&gt; PropertiesMap;</span><br><span class="line"></span><br><span class="line">// using 别名</span><br><span class="line">using PropertiesMap = hash_map&lt;UrlTableProperties *, string&gt;;</span><br><span class="line"></span><br><span class="line">// 枚举</span><br><span class="line">enum UrlTableErrors &#123; ...</span><br></pre></td></tr></table></figure>
+<pre><code>// 类和结构体
+class UrlTable &#123; ...
+class UrlTableTester &#123; ...
+struct UrlTableProperties &#123; ...
 
+// 类型定义
+typedef hash_map&lt;UrlTableProperties *, string&gt; PropertiesMap;
 
+// using 别名
+using PropertiesMap = hash_map&lt;UrlTableProperties *, string&gt;;
 
+// 枚举
+enum UrlTableErrors &#123; ...
+</code></pre>
 <h2 id="3-变量命名"><a href="#3-变量命名" class="headerlink" title="3. 变量命名"></a>3. 变量命名</h2><p><strong>总述</strong></p>
 <p>变量 (包括函数参数) 和数据成员名<strong>一律小写</strong>, 单词之间用下划线连接. <strong>类的成员变量以下划线结尾</strong>, 但结构体的就不用, 如: <code>a_local_variable</code>, <code>a_struct_data_member</code>, <code>a_class_data_member_</code>.</p>
 <h2 id="4-常量命名"><a href="#4-常量命名" class="headerlink" title="4. 常量命名"></a>4. 常量命名</h2><p><strong>总述</strong></p>
 <p>声明为 <code>constexpr</code> 或 <code>const</code> 的变量, 或在程序运行期间其值始终保持不变的, 命名时以 “k” 开头, 大小写混合. 例如:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const int kDaysInAWeek = 7;</span><br></pre></td></tr></table></figure>
-
+<pre><code>const int kDaysInAWeek = 7;
+</code></pre>
 <h2 id="5-函数命名"><a href="#5-函数命名" class="headerlink" title="5. 函数命名"></a>5. 函数命名</h2><p>一般来说, 函数名的每个单词首字母大写 (即 “<strong>驼峰变量名” 或 “帕斯卡变量名”</strong>), 没有下划线. 对于首字母缩写的单词, 更倾向于将它们视作一个单词进行首字母大写 (例如, 写作 <code>StartRpc()</code> 而非 <code>StartRPC()</code>).</p>
 <h2 id="6-命名空间命名"><a href="#6-命名空间命名" class="headerlink" title="6. 命名空间命名"></a>6. 命名空间命名</h2><p><strong>总述</strong></p>
 <p>命名空间以小写字母命名. 最高级命名空间的名字取决于项目名称. 要注意避免嵌套命名空间的名字之间和常见的顶级命名空间的名字之间发生冲突.</p>
@@ -2721,10 +2731,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2023/04/13/01%20%E3%80%90%E5%B7%A5%E4%BD%9C%E3%80%91Logbook/Hexo%E5%8F%91%E5%B8%83%E6%8C%87%E5%8D%97%E5%8F%8A%E5%85%A5%E9%97%A8/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Hexo发布指南及入门</p>
-          <p class='content'>hexo g  生成静态文件; hexo s  启动服务; hexo d  远程部署
-Welcome to Hexo! This is your very first post. Check d...</p>
+        <a class='prev' href='/2023/04/13/02%20%E3%80%90%E7%94%9F%E6%B4%BB%E3%80%91%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8A%E4%B8%80%E7%94%9F%E3%80%8B%E8%8E%AB%E6%B3%8A%E6%A1%91/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>生活不会像你想象的那么糟</p>
+          <p class='content'>生活不可能像你想象得那么好，但也不会像你想象得那么糟
+
+
+生活不可能像你想象得那么好，但也不会像你想象得那么糟。我觉得人的脆弱和坚强都超乎自己的想象。有时，我可能脆弱得一句话就泪流满面，有时，也...</p>
         </a>
       
       

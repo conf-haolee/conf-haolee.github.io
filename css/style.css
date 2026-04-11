@@ -7046,6 +7046,13 @@ pre {
   :root:not([color-scheme]) .highlight pre .params {
     color: rgba(158,142,142,0.9);
   }
+  :root:not([color-scheme]) .hljs,
+  :root:not([color-scheme]) pre code,
+  :root:not([color-scheme]) figure.highlight,
+  :root:not([color-scheme]) figure.highlight pre {
+    background: var(--color-codeblock) !important;
+    color: #d4d4d4 !important;
+  }
   :root:not([color-scheme]) *:not(.highlight) >table tr {
     background-color: var(--color-card);
   }
@@ -7133,6 +7140,13 @@ pre {
 [color-scheme='dark'] .highlight pre .line,
 [color-scheme='dark'] .highlight pre .params {
   color: rgba(158,142,142,0.9);
+}
+[color-scheme='dark'] .hljs,
+[color-scheme='dark'] pre code,
+[color-scheme='dark'] figure.highlight,
+[color-scheme='dark'] figure.highlight pre {
+  background: var(--color-codeblock) !important;
+  color: #d4d4d4 !important;
 }
 [color-scheme='dark'] *:not(.highlight) >table tr {
   background-color: var(--color-card);

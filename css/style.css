@@ -7174,3 +7174,53 @@ pre {
 [color-scheme='dark'] .btn-copy:hover {
   background: var(--color-site-body);
 }
+[color-scheme='dark'] .hljs,
+[color-scheme='dark'] pre code,
+[color-scheme='dark'] figure.highlight,
+[color-scheme='dark'] figure.highlight pre {
+  background: var(--color-codeblock) !important;
+  color: #d4d4d4 !important;
+}
+[color-scheme='dark'] .hljs-comment,
+[color-scheme='dark'] .hljs-quote {
+  color: #6a9955 !important;
+}
+[color-scheme='dark'] .hljs-keyword,
+[color-scheme='dark'] .hljs-selector-tag,
+[color-scheme='dark'] .hljs-literal,
+[color-scheme='dark'] .hljs-title {
+  color: #569cd6 !important;
+}
+[color-scheme='dark'] .hljs-string,
+[color-scheme='dark'] .hljs-doctag,
+[color-scheme='dark'] .hljs-regexp {
+  color: #ce9178 !important;
+}
+[color-scheme='dark'] .hljs-number {
+  color: #b5cea8 !important;
+}
+[color-scheme='dark'] .hljs-built_in,
+[color-scheme='dark'] .hljs-type,
+[color-scheme='dark'] .hljs-class .hljs-title {
+  color: #4ec9b0 !important;
+}
+[color-scheme='dark'] .hljs-meta,
+[color-scheme='dark'] .hljs-tag,
+[color-scheme='dark'] .hljs-attr,
+[color-scheme='dark'] .hljs-attribute,
+[color-scheme='dark'] .hljs-variable,
+[color-scheme='dark'] .hljs-template-variable {
+  color: #9cdcfe !important;
+}
+[color-scheme='dark'] .hljs-symbol,
+[color-scheme='dark'] .hljs-bullet {
+  color: #c586c0 !important;
+}
+[color-scheme='dark'] .hljs-addition {
+  background: #144212 !important;
+  color: #b5cea8 !important;
+}
+[color-scheme='dark'] .hljs-deletion {
+  background: #600 !important;
+  color: #ce9178 !important;
+}

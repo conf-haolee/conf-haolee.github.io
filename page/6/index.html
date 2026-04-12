@@ -2157,7 +2157,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1775952653052),
+    lastupdate: new Date(1775965311058),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2481,7 +2481,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://conf-haolee.github.io/2022/09/22/工作/机器视觉之【相机镜头】基础知识/">
+  <link itemprop="mainEntityOfPage" href="https://conf-haolee.github.io/2022/09/22/工作/机器视觉之【工业相机】基础知识/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="cvhao's library">
   </span>
@@ -2499,15 +2499,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/22/%E5%B7%A5%E4%BD%9C/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E4%B9%8B%E3%80%90%E7%9B%B8%E6%9C%BA%E9%95%9C%E5%A4%B4%E3%80%91%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"  itemprop="url">
-        机器视觉之【相机镜头】基础知识
+      <a href="/2022/09/22/%E5%B7%A5%E4%BD%9C/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E4%B9%8B%E3%80%90%E5%B7%A5%E4%B8%9A%E7%9B%B8%E6%9C%BA%E3%80%91%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"  itemprop="url">
+        机器视觉之【工业相机】基础知识
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       <div align="center">
-<img src=https://raw.githubusercontent.com/conf-haolee/Images/master/uPic/Ms3QlT.png  width=400px />
+<img src= https://raw.githubusercontent.com/conf-haolee/Images/master/uPic/QQ_1727015521870.png width=400px />
 </div>
     
   </div>
@@ -2536,7 +2536,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       </div>
       
         <div>
-          <a class='readmore' href='/2022/09/22/%E5%B7%A5%E4%BD%9C/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E4%B9%8B%E3%80%90%E7%9B%B8%E6%9C%BA%E9%95%9C%E5%A4%B4%E3%80%91%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/' itemprop="url">
+          <a class='readmore' href='/2022/09/22/%E5%B7%A5%E4%BD%9C/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E4%B9%8B%E3%80%90%E5%B7%A5%E4%B8%9A%E7%9B%B8%E6%9C%BA%E3%80%91%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -3464,27 +3464,46 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script>
-  
-    volantis.css("https://unpkg.com/@highlightjs/cdn-assets@11.5.1/styles/default.min.css");
   
   
-    volantis.js("https://unpkg.com/@highlightjs/cdn-assets@11.5.1/highlight.min.js").then(()=>{
-      volantis.requestAnimationFrame(hljs.highlightAll)
-    })
-  
-  
-    function p_highlightjs_copyCode(){
-      if (!(document.querySelector(".highlight .code pre") ||
-        document.querySelector(".article pre code"))) {
-        return;
-      }
-      VolantisApp.utilCopyCode(".highlight .code pre, .article pre code")
-    }
-    volantis.requestAnimationFrame(p_highlightjs_copyCode)
-  
-  </script>
+<script src="https://unpkg.com/prismjs/components/prism-core.min.js"></script>
 
+
+  
+<script src="https://unpkg.com/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+  
+<script src="https://unpkg.com/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+
+
+  
+<link rel="stylesheet" href="https://unpkg.com/prismjs/themes/prism-dark.css">
+
+
+  
+<link rel="stylesheet" href="https://unpkg.com/prismjs/plugins/line-numbers/prism-line-numbers.css">
+
+
+<script>
+
+  function p_prismjs_copyCode(){
+    if (!document.querySelector("pre")) {
+      return;
+    }
+    let pres = document.querySelectorAll("pre")
+    pres.forEach(pre=>{
+      var wrapper = document.createElement('div');
+      wrapper.classList.add('code-toolbar');
+      pre.parentNode.insertBefore(wrapper, pre);
+      wrapper.appendChild(pre);
+    })
+    VolantisApp.utilCopyCode(".code-toolbar pre")
+  }
+  volantis.requestAnimationFrame(p_prismjs_copyCode)
+
+</script>
 
 
 

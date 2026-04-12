@@ -2157,7 +2157,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1775952653052),
+    lastupdate: new Date(1775965311058),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -3197,27 +3197,46 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script>
-  
-    volantis.css("https://unpkg.com/@highlightjs/cdn-assets@11.5.1/styles/default.min.css");
   
   
-    volantis.js("https://unpkg.com/@highlightjs/cdn-assets@11.5.1/highlight.min.js").then(()=>{
-      volantis.requestAnimationFrame(hljs.highlightAll)
-    })
-  
-  
-    function p_highlightjs_copyCode(){
-      if (!(document.querySelector(".highlight .code pre") ||
-        document.querySelector(".article pre code"))) {
-        return;
-      }
-      VolantisApp.utilCopyCode(".highlight .code pre, .article pre code")
-    }
-    volantis.requestAnimationFrame(p_highlightjs_copyCode)
-  
-  </script>
+<script src="https://unpkg.com/prismjs/components/prism-core.min.js"></script>
 
+
+  
+<script src="https://unpkg.com/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+  
+<script src="https://unpkg.com/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+
+
+  
+<link rel="stylesheet" href="https://unpkg.com/prismjs/themes/prism-dark.css">
+
+
+  
+<link rel="stylesheet" href="https://unpkg.com/prismjs/plugins/line-numbers/prism-line-numbers.css">
+
+
+<script>
+
+  function p_prismjs_copyCode(){
+    if (!document.querySelector("pre")) {
+      return;
+    }
+    let pres = document.querySelectorAll("pre")
+    pres.forEach(pre=>{
+      var wrapper = document.createElement('div');
+      wrapper.classList.add('code-toolbar');
+      pre.parentNode.insertBefore(wrapper, pre);
+      wrapper.appendChild(pre);
+    })
+    VolantisApp.utilCopyCode(".code-toolbar pre")
+  }
+  volantis.requestAnimationFrame(p_prismjs_copyCode)
+
+</script>
 
 
 

@@ -2161,7 +2161,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1775952653052),
+    lastupdate: new Date(1775965311058),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2695,6 +2695,19 @@ class Program
        <!-- 参考资料、相关资料等 -->
       
        <!-- 相关文章 -->
+      
+        
+  <div class="related_posts">
+    <section class='header'>
+      <i class="fa-solid fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
+    </section>
+    <section class='body'>
+      <div class="vlts-rps"><a class="item" href="\2026\01\08\学习\2026-01-08-Csharp-语法糖系统总结：给-C++-程序员的工程向入门指南\" title="C# 语法糖系统总结：给 C++ 程序员的工程向入门指南" rel="bookmark "><img src="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><span class="title">C# 语法糖系统总结：给 C++ 程序员的工程向入门指南</span><span class="excerpt">
+面向对象：有 C++ 基础，刚入门 C# 的工程师目标：看到 C# 代码时，一眼识别哪些是语法糖，知道该不该用、为什么用
+
+</span></a><a class="item" href="\2026\01\08\学习\用 AI 做代码规范审查：C++  Csharp代码 Review Prompt 实战整理\" title="用 AI 做代码规范审查：代码 Review Prompt 实战整理" rel="bookmark "><img src="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><span class="title">用 AI 做代码规范审查：代码 Review Prompt 实战整理</span><span class="excerpt">
+关键词：Code Review、代码规范、C++、C#、AI 审查、工程质量适用人群：工业软件工程师、视觉算法工程师、C...</span></a><a class="item" href="\2026\01\14\工作\TYDH_LightDemo 光源控制器 Demo：实现方式说明\" title="TYDH_LightDemo 光源控制器 Demo：实现方式说明" rel="bookmark "><img src="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><span class="title">TYDH_LightDemo 光源控制器 Demo：实现方式说明</span><span class="excerpt">
+适用范围：本工程为 WPF（.NET Framework 4.8）简易 Demo，用于通过串口控制 TYDH 系列光源控...</span></a><a class="item" href="\2021\10\31\学习\2021-10-31-Linux-常用命令速查\" title="Linux 常用命令速查" rel="bookmark "><img src="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><span class="title">Linux 常用命令速查</span><span class="excerpt">Linux 命令行速查表</span></a></div></section></div>
       
       <!-- 版权声明组件 -->
       
@@ -3296,27 +3309,46 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script>
-  
-    volantis.css("https://unpkg.com/@highlightjs/cdn-assets@11.5.1/styles/default.min.css");
   
   
-    volantis.js("https://unpkg.com/@highlightjs/cdn-assets@11.5.1/highlight.min.js").then(()=>{
-      volantis.requestAnimationFrame(hljs.highlightAll)
-    })
-  
-  
-    function p_highlightjs_copyCode(){
-      if (!(document.querySelector(".highlight .code pre") ||
-        document.querySelector(".article pre code"))) {
-        return;
-      }
-      VolantisApp.utilCopyCode(".highlight .code pre, .article pre code")
-    }
-    volantis.requestAnimationFrame(p_highlightjs_copyCode)
-  
-  </script>
+<script src="https://unpkg.com/prismjs/components/prism-core.min.js"></script>
 
+
+  
+<script src="https://unpkg.com/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+  
+<script src="https://unpkg.com/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+
+
+  
+<link rel="stylesheet" href="https://unpkg.com/prismjs/themes/prism-dark.css">
+
+
+  
+<link rel="stylesheet" href="https://unpkg.com/prismjs/plugins/line-numbers/prism-line-numbers.css">
+
+
+<script>
+
+  function p_prismjs_copyCode(){
+    if (!document.querySelector("pre")) {
+      return;
+    }
+    let pres = document.querySelectorAll("pre")
+    pres.forEach(pre=>{
+      var wrapper = document.createElement('div');
+      wrapper.classList.add('code-toolbar');
+      pre.parentNode.insertBefore(wrapper, pre);
+      wrapper.appendChild(pre);
+    })
+    VolantisApp.utilCopyCode(".code-toolbar pre")
+  }
+  volantis.requestAnimationFrame(p_prismjs_copyCode)
+
+</script>
 
 
 

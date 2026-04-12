@@ -2159,7 +2159,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1775952653052),
+    lastupdate: new Date(1775965311058),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2592,6 +2592,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
        <!-- 相关文章 -->
       
+        
+  <div class="related_posts">
+    <section class='header'>
+      <i class="fa-solid fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
+    </section>
+    <section class='body'>
+      <div class="vlts-rps"><a class="item" href="\2023\04\13\生活\《一生》莫泊桑\" title="生活不会像你想象的那么糟" rel="bookmark "><img src="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><span class="title">生活不会像你想象的那么糟</span><span class="excerpt">生活不可能像你想象得那么好，但也不会像你想象得那么糟</span></a></div></section></div>
+      
       <!-- 版权声明组件 -->
       
         
@@ -2702,8 +2710,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2024/07/29/%E5%B7%A5%E4%BD%9C/2025%E5%B1%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%A0%A1%E6%8B%9B%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>2025届计算机校招查漏补缺</p>
+        <a class='prev' href='/2024/07/30/%E7%94%9F%E6%B4%BB/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%AE%8C%E5%96%84%E8%AE%A1%E5%88%92/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>个人博客的完善计划</p>
+          <p class='content'>www.cvhao.top
+
+
+个人博客的完善计划
+ 更新域名
+ 解决评论问题
+ 修改用户头像
+ 添加标题栏logo
+ 完善搜索功能  2024/4/25 更新
+ 修改文章内代码样式 2024/...</p>
+        </a>
+      
+      
+        <a class='next' href='/2024/07/29/%E5%B7%A5%E4%BD%9C/2025%E5%B1%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%A0%A1%E6%8B%9B%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA/'>
+          <p class='title'>2025届计算机校招查漏补缺<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>https://csdiy.wiki/
 
 
@@ -2711,13 +2734,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 https://csdiy.wiki/
 小林coding
 小林coding (xiaol...</p>
-        </a>
-      
-      
-        <a class='next' href='/2024/07/15/%E5%B7%A5%E4%BD%9C/404%20%E6%99%BA%E8%83%BD%E8%A7%86%E8%A7%89%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%96%B0%E7%94%9F%E6%8C%87%E5%8D%97/'>
-          <p class='title'>404智能视觉实验室新生指南<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>
-  7dd0d79e949636a8d4da2f399a01bfc540a5f0a870614cc0cd2218a4137f56d27b6fc9ca2bf6a37779fc4895b261ab...</p>
         </a>
       
     </div>
@@ -3181,27 +3197,46 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script>
-  
-    volantis.css("https://unpkg.com/@highlightjs/cdn-assets@11.5.1/styles/default.min.css");
   
   
-    volantis.js("https://unpkg.com/@highlightjs/cdn-assets@11.5.1/highlight.min.js").then(()=>{
-      volantis.requestAnimationFrame(hljs.highlightAll)
-    })
-  
-  
-    function p_highlightjs_copyCode(){
-      if (!(document.querySelector(".highlight .code pre") ||
-        document.querySelector(".article pre code"))) {
-        return;
-      }
-      VolantisApp.utilCopyCode(".highlight .code pre, .article pre code")
-    }
-    volantis.requestAnimationFrame(p_highlightjs_copyCode)
-  
-  </script>
+<script src="https://unpkg.com/prismjs/components/prism-core.min.js"></script>
 
+
+  
+<script src="https://unpkg.com/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+  
+<script src="https://unpkg.com/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+
+
+  
+<link rel="stylesheet" href="https://unpkg.com/prismjs/themes/prism-dark.css">
+
+
+  
+<link rel="stylesheet" href="https://unpkg.com/prismjs/plugins/line-numbers/prism-line-numbers.css">
+
+
+<script>
+
+  function p_prismjs_copyCode(){
+    if (!document.querySelector("pre")) {
+      return;
+    }
+    let pres = document.querySelectorAll("pre")
+    pres.forEach(pre=>{
+      var wrapper = document.createElement('div');
+      wrapper.classList.add('code-toolbar');
+      pre.parentNode.insertBefore(wrapper, pre);
+      wrapper.appendChild(pre);
+    })
+    VolantisApp.utilCopyCode(".code-toolbar pre")
+  }
+  volantis.requestAnimationFrame(p_prismjs_copyCode)
+
+</script>
 
 
 

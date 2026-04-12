@@ -2161,7 +2161,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1775952653052),
+    lastupdate: new Date(1775965311058),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2673,6 +2673,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
        <!-- 相关文章 -->
       
+        
+  <div class="related_posts">
+    <section class='header'>
+      <i class="fa-solid fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
+    </section>
+    <section class='body'>
+      <div class="vlts-rps"><a class="item" href="\2022\09\22\工作\机器视觉之【相机镜头】基础知识\" title="机器视觉之【相机镜头】基础知识" rel="bookmark "><img src="https://raw.githubusercontent.com/conf-haolee/Images/master/uPic/Ms3QlT.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/conf-haolee/Images/master/uPic/Ms3QlT.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><span class="title">机器视觉之【相机镜头】基础知识</span><span class="excerpt">
+
+</span></a></div></section></div>
+      
       <!-- 版权声明组件 -->
       
         
@@ -2796,14 +2806,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2022/09/22/%E5%B7%A5%E4%BD%9C/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E4%B9%8B%E3%80%90%E5%B7%A5%E4%B8%9A%E7%9B%B8%E6%9C%BA%E3%80%91%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>机器视觉之【工业相机】基础知识</p>
-          <p class='content'>
+        <a class='prev' href='/2023/04/12/%E5%AD%A6%E4%B9%A0/C++%E7%A8%8B%E5%BA%8F%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>C++程序命名规范</p>
+          <p class='content'>程序中最重要的一致性规则是命名管理。 命名的风格能让我们在不需要去查找类型声明的条件下快速地了解某个名字代表的含义：
+类型，变量，函数，常量，宏等等。
 
 
-
-
-机器视觉之【工业相机】基础知识什么是工业相机？工业相机是专门为工业领域中的自动化检测、生产线监控和质量控制等任务设计的摄像设备。与消费级相机不同，工业相机注重的是图像的精确性、稳定性和...</p>
+C++程序命名规定 #学习笔记
+程序中...</p>
         </a>
       
       
@@ -3284,27 +3294,46 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script>
-  
-    volantis.css("https://unpkg.com/@highlightjs/cdn-assets@11.5.1/styles/default.min.css");
   
   
-    volantis.js("https://unpkg.com/@highlightjs/cdn-assets@11.5.1/highlight.min.js").then(()=>{
-      volantis.requestAnimationFrame(hljs.highlightAll)
-    })
-  
-  
-    function p_highlightjs_copyCode(){
-      if (!(document.querySelector(".highlight .code pre") ||
-        document.querySelector(".article pre code"))) {
-        return;
-      }
-      VolantisApp.utilCopyCode(".highlight .code pre, .article pre code")
-    }
-    volantis.requestAnimationFrame(p_highlightjs_copyCode)
-  
-  </script>
+<script src="https://unpkg.com/prismjs/components/prism-core.min.js"></script>
 
+
+  
+<script src="https://unpkg.com/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+  
+<script src="https://unpkg.com/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+
+
+  
+<link rel="stylesheet" href="https://unpkg.com/prismjs/themes/prism-dark.css">
+
+
+  
+<link rel="stylesheet" href="https://unpkg.com/prismjs/plugins/line-numbers/prism-line-numbers.css">
+
+
+<script>
+
+  function p_prismjs_copyCode(){
+    if (!document.querySelector("pre")) {
+      return;
+    }
+    let pres = document.querySelectorAll("pre")
+    pres.forEach(pre=>{
+      var wrapper = document.createElement('div');
+      wrapper.classList.add('code-toolbar');
+      pre.parentNode.insertBefore(wrapper, pre);
+      wrapper.appendChild(pre);
+    })
+    VolantisApp.utilCopyCode(".code-toolbar pre")
+  }
+  volantis.requestAnimationFrame(p_prismjs_copyCode)
+
+</script>
 
 
 

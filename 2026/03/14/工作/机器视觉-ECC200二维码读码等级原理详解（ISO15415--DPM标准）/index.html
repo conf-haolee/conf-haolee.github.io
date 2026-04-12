@@ -2163,7 +2163,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1775952653052),
+    lastupdate: new Date(1775965311058),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2995,6 +2995,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
        <!-- 相关文章 -->
       
+        
+  <div class="related_posts">
+    <section class='header'>
+      <i class="fa-solid fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
+    </section>
+    <section class='body'>
+      <div class="vlts-rps"><a class="item" href="\2024\04\07\学习\中国大陆机器视觉工程师岗位未来三年前景分析报告 (2025-2028)\" title="中国大陆机器视觉工程师岗位未来三年前景分析报告 (2025-2028)" rel="bookmark "><img src="https://raw.githubusercontent.com/conf-haolee/Images/master/uPic/image-20250407220734842.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/conf-haolee/Images/master/uPic/image-20250407220734842.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><span class="title">中国大陆机器视觉工程师岗位未来三年前景分析报告 (2025-2028)</span><span class="excerpt"></span></a><a class="item" href="\2026\01\14\工作\TYDH_LightDemo 光源控制器 Demo：实现方式说明\" title="TYDH_LightDemo 光源控制器 Demo：实现方式说明" rel="bookmark "><img src="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><span class="title">TYDH_LightDemo 光源控制器 Demo：实现方式说明</span><span class="excerpt">
+适用范围：本工程为 WPF（.NET Framework 4.8）简易 Demo，用于通过串口控制 TYDH 系列光源控...</span></a><a class="item" href="\2025\07\22\工作\机器视觉之【视觉项目调试】\" title="机器视觉之【视觉项目调试】" rel="bookmark "><img src="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><span class="title">机器视觉之【视觉项目调试】</span></a><a class="item" href="\2026\02\10\工作\机器视觉：相机视野（FOV）与工作距离（WD）计算指南\" title="机器视觉：相机视野（FOV）与工作距离（WD）计算指南" rel="bookmark "><img src="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><span class="title">机器视觉：相机视野（FOV）与工作距离（WD）计算指南</span><span class="excerpt">
+面向视觉工程师的实用笔记：从光学原理 → 工程公式 → 实际项目计算
+</span></a><a class="item" href="\2025\08\26\工作\什么是图像标定，图像标定在算什么？以九点标定为例\" title="什么是图像标定，图像标定在算什么？以九点标定为例" rel="bookmark "><img src="https://raw.githubusercontent.com/conf-haolee/Images/master/uPic/sV3aL1.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/conf-haolee/Images/master/uPic/sV3aL1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><span class="title">什么是图像标定，图像标定在算什么？以九点标定为例</span><span class="excerpt"></span></a></div></section></div>
+      
       <!-- 版权声明组件 -->
       
         
@@ -3602,27 +3613,46 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script>
-  
-    volantis.css("https://unpkg.com/@highlightjs/cdn-assets@11.5.1/styles/default.min.css");
   
   
-    volantis.js("https://unpkg.com/@highlightjs/cdn-assets@11.5.1/highlight.min.js").then(()=>{
-      volantis.requestAnimationFrame(hljs.highlightAll)
-    })
-  
-  
-    function p_highlightjs_copyCode(){
-      if (!(document.querySelector(".highlight .code pre") ||
-        document.querySelector(".article pre code"))) {
-        return;
-      }
-      VolantisApp.utilCopyCode(".highlight .code pre, .article pre code")
-    }
-    volantis.requestAnimationFrame(p_highlightjs_copyCode)
-  
-  </script>
+<script src="https://unpkg.com/prismjs/components/prism-core.min.js"></script>
 
+
+  
+<script src="https://unpkg.com/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+  
+<script src="https://unpkg.com/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+
+
+  
+<link rel="stylesheet" href="https://unpkg.com/prismjs/themes/prism-dark.css">
+
+
+  
+<link rel="stylesheet" href="https://unpkg.com/prismjs/plugins/line-numbers/prism-line-numbers.css">
+
+
+<script>
+
+  function p_prismjs_copyCode(){
+    if (!document.querySelector("pre")) {
+      return;
+    }
+    let pres = document.querySelectorAll("pre")
+    pres.forEach(pre=>{
+      var wrapper = document.createElement('div');
+      wrapper.classList.add('code-toolbar');
+      pre.parentNode.insertBefore(wrapper, pre);
+      wrapper.appendChild(pre);
+    })
+    VolantisApp.utilCopyCode(".code-toolbar pre")
+  }
+  volantis.requestAnimationFrame(p_prismjs_copyCode)
+
+</script>
 
 
 

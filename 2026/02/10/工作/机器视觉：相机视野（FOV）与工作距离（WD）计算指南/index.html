@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
     <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/#6.0.0-alpha.1'>
   <meta name="generator" content="Hexo 6.3.0">
   <meta name="Volantis" content="6.0.0-alpha.1">
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2026/02/10/工作/机器视觉：相机视野（fov）与工作距离（wd）计算指南/"/>
+  <link rel="canonical" href="https://conf-haolee.github.io/2026/02/10/工作/机器视觉：相机视野（fov）与工作距离（wd）计算指南/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -42,10 +42,10 @@
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="机器视觉：相机视野（FOV）与工作距离（WD）计算指南">
-<meta property="og:url" content="http://example.com/2026/02/10/%E5%B7%A5%E4%BD%9C/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%EF%BC%9A%E7%9B%B8%E6%9C%BA%E8%A7%86%E9%87%8E%EF%BC%88FOV%EF%BC%89%E4%B8%8E%E5%B7%A5%E4%BD%9C%E8%B7%9D%E7%A6%BB%EF%BC%88WD%EF%BC%89%E8%AE%A1%E7%AE%97%E6%8C%87%E5%8D%97/index.html">
+<meta property="og:url" content="https://conf-haolee.github.io/2026/02/10/%E5%B7%A5%E4%BD%9C/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%EF%BC%9A%E7%9B%B8%E6%9C%BA%E8%A7%86%E9%87%8E%EF%BC%88FOV%EF%BC%89%E4%B8%8E%E5%B7%A5%E4%BD%9C%E8%B7%9D%E7%A6%BB%EF%BC%88WD%EF%BC%89%E8%AE%A1%E7%AE%97%E6%8C%87%E5%8D%97/index.html">
 <meta property="og:site_name" content="cvhao&#39;s library">
 <meta property="og:description" content="面向视觉工程师的实用笔记：从光学原理 → 工程公式 → 实际项目计算">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2026-02-09T16:00:00.000Z">
 <meta property="article:modified_time" content="2026-04-11T02:44:49.598Z">
@@ -1749,9 +1749,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		'}'+
 	'</style>'+
     '<div class="kill-ie">'+
-        `<span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>`+
-        `<span class="kill-c">Microsoft has terminated support for Internet Explorer (IE) 10 and earlier versions in 2016. <br/>There are great security risks to continue using it. Please use contemporary mainstream browsers to access.</span><br/>`+
-        `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>Learn more ></strong></a>`+
+        `<span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>`+
+        `<span class="kill-c">微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</span><br/>`+
+        `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>了解详情 ></strong></a>`+
     '</div>');
 </script>
 
@@ -1779,9 +1779,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		}
 	</style>
     <div class="kill-noscript">
-        <span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>
-        <span class="kill-c">This page requires browser support (enable) JavaScript</span><br/>
-        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>Learn more ></strong></a>
+        <span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>
+        <span class="kill-c">本页面需要浏览器支持（启用）JavaScript</span><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
     </div>
 </noscript>
 
@@ -2163,7 +2163,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1775899934310),
+    lastupdate: new Date(1775952653052),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2171,7 +2171,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       fancybox_js: 'https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/4.0.31/fancybox.umd.min.js'
     },
     sidebar: {
-      for_page: ["blogger","category","tagcloud","donate","webinfo"],
+      for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
       webinfo: {
         lastupd: {
@@ -2201,8 +2201,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     languages: {
       
         search: {
-          hits_empty: "We didn't find any results for the search: ${query}.",
-          hits_stats: "${hits} results found in ${time} ms",
+          hits_empty: "找不到您查询的内容：${query}",
+          hits_stats: "找到 ${hits} 条结果，用时 ${time} 毫秒",
         }
       
     }
@@ -2480,7 +2480,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2026/02/10/工作/机器视觉：相机视野（FOV）与工作距离（WD）计算指南/">
+  <link itemprop="mainEntityOfPage" href="https://conf-haolee.github.io/2026/02/10/工作/机器视觉：相机视野（FOV）与工作距离（WD）计算指南/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="cvhao's library">
   </span>
@@ -2544,7 +2544,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2026-02-10T00:00:00+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Feb 10, 2026</p>
+    <p>发布于：2026年2月10日</p>
   </a>
 </div>
 
@@ -2718,7 +2718,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ol>
 <hr>
 <h2 id="六、Python-快速计算小脚本（现场调机版）"><a href="#六、Python-快速计算小脚本（现场调机版）" class="headerlink" title="六、Python 快速计算小脚本（现场调机版）"></a>六、Python 快速计算小脚本（现场调机版）</h2><p>下面脚本直接输入：分辨率、像元尺寸、焦距、工作距离，就能输出 <strong>Sensor 尺寸、视野、单像素精度</strong>。</p>
-<pre><code class="python">from dataclasses import dataclass
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">from dataclasses import dataclass
 
 
 @dataclass
@@ -2730,26 +2730,26 @@ class Camera:
 
 def calc_sensor_mm(cam: Camera) -&gt; tuple[float, float]:
     &quot;&quot;&quot;返回传感器宽高 (mm)&quot;&quot;&quot;
-    sensor_w = cam.res_h * cam.pixel_um / 1000.0
-    sensor_h = cam.res_v * cam.pixel_um / 1000.0
+    sensor_w &#x3D; cam.res_h * cam.pixel_um &#x2F; 1000.0
+    sensor_h &#x3D; cam.res_v * cam.pixel_um &#x2F; 1000.0
     return sensor_w, sensor_h
 
 
 def calc_fov_mm(cam: Camera, f_mm: float, wd_mm: float) -&gt; dict:
     &quot;&quot;&quot;已知焦距 f(mm) 与工作距离 WD(mm)，计算 FOV 与单像素精度&quot;&quot;&quot;
-    if f_mm &lt;= 0:
+    if f_mm &lt;&#x3D; 0:
         raise ValueError(&quot;f_mm must be &gt; 0&quot;)
-    if wd_mm &lt;= f_mm:
-        raise ValueError(&quot;wd_mm must be greater than f_mm (otherwise k becomes &lt;= 0)&quot;)
+    if wd_mm &lt;&#x3D; f_mm:
+        raise ValueError(&quot;wd_mm must be greater than f_mm (otherwise k becomes &lt;&#x3D; 0)&quot;)
 
-    sensor_w, sensor_h = calc_sensor_mm(cam)
+    sensor_w, sensor_h &#x3D; calc_sensor_mm(cam)
 
-    k = (wd_mm - f_mm) / f_mm
-    fov_w = sensor_w * k
-    fov_h = sensor_h * k
+    k &#x3D; (wd_mm - f_mm) &#x2F; f_mm
+    fov_w &#x3D; sensor_w * k
+    fov_h &#x3D; sensor_h * k
 
-    mm_per_px_h = fov_w / cam.res_h
-    mm_per_px_v = fov_h / cam.res_v
+    mm_per_px_h &#x3D; fov_w &#x2F; cam.res_h
+    mm_per_px_v &#x3D; fov_h &#x2F; cam.res_v
 
     return &#123;
         &quot;sensor_w_mm&quot;: sensor_w,
@@ -2762,19 +2762,19 @@ def calc_fov_mm(cam: Camera, f_mm: float, wd_mm: float) -&gt; dict:
     &#125;
 
 
-if __name__ == &quot;__main__&quot;:
-    # 你的相机：ME2C-2001-6GM / IMX183
-    cam = Camera(res_h=5496, res_v=3672, pixel_um=2.4)
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    # 你的相机：ME2C-2001-6GM &#x2F; IMX183
+    cam &#x3D; Camera(res_h&#x3D;5496, res_v&#x3D;3672, pixel_um&#x3D;2.4)
 
-    wd = 230.0
+    wd &#x3D; 230.0
     for f in (12.0, 16.0, 25.0):
-        r = calc_fov_mm(cam, f_mm=f, wd_mm=wd)
+        r &#x3D; calc_fov_mm(cam, f_mm&#x3D;f, wd_mm&#x3D;wd)
         print(f&quot;
-=== f=&#123;f:.1f&#125;mm, WD=&#123;wd:.1f&#125;mm ===&quot;)
+&#x3D;&#x3D;&#x3D; f&#x3D;&#123;f:.1f&#125;mm, WD&#x3D;&#123;wd:.1f&#125;mm &#x3D;&#x3D;&#x3D;&quot;)
         print(f&quot;Sensor: &#123;r[&#39;sensor_w_mm&#39;]:.3f&#125; x &#123;r[&#39;sensor_h_mm&#39;]:.3f&#125; mm&quot;)
         print(f&quot;FOV:    &#123;r[&#39;fov_w_mm&#39;]:.2f&#125; x &#123;r[&#39;fov_h_mm&#39;]:.2f&#125; mm&quot;)
-        print(f&quot;Res:    &#123;r[&#39;mm_per_px_h&#39;] * 1000:.1f&#125; um/px (H)&quot;)
-</code></pre>
+        print(f&quot;Res:    &#123;r[&#39;mm_per_px_h&#39;] * 1000:.1f&#125; um&#x2F;px (H)&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>你在现场只要改这几项就行：</p>
 <ul>
 <li><code>res_h/res_v/pixel_um</code>（相机）</li>
@@ -2824,6 +2824,23 @@ if __name__ == &quot;__main__&quot;:
       
       <!-- 版权声明组件 -->
       
+        
+          <div class='copyright'>
+            <blockquote>
+              
+                
+                  <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+                
+              
+                
+                  <p>本文永久链接是：<a href="https://conf-haolee.github.io/2026/02/10/工作/机器视觉：相机视野（FOV）与工作距离（WD）计算指南/">https://conf-haolee.github.io/2026/02/10/工作/机器视觉：相机视野（FOV）与工作距离（WD）计算指南/</a></p>
+                
+              
+            </blockquote>
+          </div>
+        
+      
       <!-- 打赏组件 -->
       
     </div>
@@ -2839,7 +2856,7 @@ if __name__ == &quot;__main__&quot;:
           <div class="new-meta-item date" itemprop="dateModified" datetime="2026-04-11T10:44:49+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Apr 11, 2026</p>
+    <p>更新于：2026年4月11日</p>
   </a>
 </div>
 
@@ -2865,7 +2882,7 @@ if __name__ == &quot;__main__&quot;:
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2026/02/10/%E5%B7%A5%E4%BD%9C/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%EF%BC%9A%E7%9B%B8%E6%9C%BA%E8%A7%86%E9%87%8E%EF%BC%88FOV%EF%BC%89%E4%B8%8E%E5%B7%A5%E4%BD%9C%E8%B7%9D%E7%A6%BB%EF%BC%88WD%EF%BC%89%E8%AE%A1%E7%AE%97%E6%8C%87%E5%8D%97/&title=机器视觉：相机视野（FOV）与工作距离（WD）计算指南 - cvhao's library&summary=
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://conf-haolee.github.io/2026/02/10/%E5%B7%A5%E4%BD%9C/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%EF%BC%9A%E7%9B%B8%E6%9C%BA%E8%A7%86%E9%87%8E%EF%BC%88FOV%EF%BC%89%E4%B8%8E%E5%B7%A5%E4%BD%9C%E8%B7%9D%E7%A6%BB%EF%BC%88WD%EF%BC%89%E8%AE%A1%E7%AE%97%E6%8C%87%E5%8D%97/&title=机器视觉：相机视野（FOV）与工作距离（WD）计算指南 - cvhao's library&summary=
 面向视觉工程师的实用笔记：从光学原理 → 工程公式 → 实际项目计算
 "
           
@@ -2879,7 +2896,7 @@ if __name__ == &quot;__main__&quot;:
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2026/02/10/%E5%B7%A5%E4%BD%9C/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%EF%BC%9A%E7%9B%B8%E6%9C%BA%E8%A7%86%E9%87%8E%EF%BC%88FOV%EF%BC%89%E4%B8%8E%E5%B7%A5%E4%BD%9C%E8%B7%9D%E7%A6%BB%EF%BC%88WD%EF%BC%89%E8%AE%A1%E7%AE%97%E6%8C%87%E5%8D%97/&title=机器视觉：相机视野（FOV）与工作距离（WD）计算指南 - cvhao's library&summary=
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://conf-haolee.github.io/2026/02/10/%E5%B7%A5%E4%BD%9C/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%EF%BC%9A%E7%9B%B8%E6%9C%BA%E8%A7%86%E9%87%8E%EF%BC%88FOV%EF%BC%89%E4%B8%8E%E5%B7%A5%E4%BD%9C%E8%B7%9D%E7%A6%BB%EF%BC%88WD%EF%BC%89%E8%AE%A1%E7%AE%97%E6%8C%87%E5%8D%97/&title=机器视觉：相机视野（FOV）与工作距离（WD）计算指南 - cvhao's library&summary=
 面向视觉工程师的实用笔记：从光学原理 → 工程公式 → 实际项目计算
 "
           
@@ -2893,7 +2910,7 @@ if __name__ == &quot;__main__&quot;:
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2026/02/10/%E5%B7%A5%E4%BD%9C/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%EF%BC%9A%E7%9B%B8%E6%9C%BA%E8%A7%86%E9%87%8E%EF%BC%88FOV%EF%BC%89%E4%B8%8E%E5%B7%A5%E4%BD%9C%E8%B7%9D%E7%A6%BB%EF%BC%88WD%EF%BC%89%E8%AE%A1%E7%AE%97%E6%8C%87%E5%8D%97/&title=机器视觉：相机视野（FOV）与工作距离（WD）计算指南 - cvhao's library&summary=
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://conf-haolee.github.io/2026/02/10/%E5%B7%A5%E4%BD%9C/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%EF%BC%9A%E7%9B%B8%E6%9C%BA%E8%A7%86%E9%87%8E%EF%BC%88FOV%EF%BC%89%E4%B8%8E%E5%B7%A5%E4%BD%9C%E8%B7%9D%E7%A6%BB%EF%BC%88WD%EF%BC%89%E8%AE%A1%E7%AE%97%E6%8C%87%E5%8D%97/&title=机器视觉：相机视野（FOV）与工作距离（WD）计算指南 - cvhao's library&summary=
 面向视觉工程师的实用笔记：从光学原理 → 工程公式 → 实际项目计算
 "
           
@@ -3054,7 +3071,7 @@ ECC200二维码的等级评估不是根据外观判断，而是按照ISO标准�
       
     
       
-        <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+        <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
 </div>
       
     
@@ -3670,7 +3687,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"cvhao's library","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"haolee","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"haolees blogs"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"cvhao's library"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/工作/","name":"工作"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/工作/机器视觉/","name":"机器视觉"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2026/02/10/工作/机器视觉：相机视野（FOV）与工作距离（WD）计算指南/","name":"机器视觉：相机视野（FOV）与工作距离（WD）计算指南"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"cvhao's library","url":"http://example.com/","keywords":null,"description":"haolees blogs","author":{"@type":"Person","name":"haolee","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"haolees blogs"},"publisher":{"@type":"Organization","name":"cvhao's library","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"机器视觉：相机视野（FOV）与工作距离（WD）计算指南","description":"\n面向视觉工程师的实用笔记：从光学原理 → 工程公式 → 实际项目计算\n","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2026/02/10/%E5%B7%A5%E4%BD%9C/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%EF%BC%9A%E7%9B%B8%E6%9C%BA%E8%A7%86%E9%87%8E%EF%BC%88FOV%EF%BC%89%E4%B8%8E%E5%B7%A5%E4%BD%9C%E8%B7%9D%E7%A6%BB%EF%BC%88WD%EF%BC%89%E8%AE%A1%E7%AE%97%E6%8C%87%E5%8D%97/"},"author":{"@type":"Person","name":"haolee","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"cvhao's library","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2026/02/10/%E5%B7%A5%E4%BD%9C/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%EF%BC%9A%E7%9B%B8%E6%9C%BA%E8%A7%86%E9%87%8E%EF%BC%88FOV%EF%BC%89%E4%B8%8E%E5%B7%A5%E4%BD%9C%E8%B7%9D%E7%A6%BB%EF%BC%88WD%EF%BC%89%E8%AE%A1%E7%AE%97%E6%8C%87%E5%8D%97/","wordCount":36,"datePublished":"2026-02-09T16:00:00.000Z","dateModified":"2026-04-11T02:44:49.598Z","articleSection":"工作","keywords":"机器视觉,调试","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"cvhao's library","url":"https://conf-haolee.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"haolee","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://conf-haolee.github.io/","sameAs":["https://github.com/volantis-x"],"description":"haolees blogs"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://conf-haolee.github.io/","name":"cvhao's library"}},{"@type":"ListItem","position":2,"item":{"@id":"https://conf-haolee.github.io/categories/工作/","name":"工作"}},{"@type":"ListItem","position":2,"item":{"@id":"https://conf-haolee.github.io/categories/工作/机器视觉/","name":"机器视觉"}},{"@type":"ListItem","position":3,"item":{"@id":"https://conf-haolee.github.io/2026/02/10/工作/机器视觉：相机视野（FOV）与工作距离（WD）计算指南/","name":"机器视觉：相机视野（FOV）与工作距离（WD）计算指南"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"cvhao's library","url":"https://conf-haolee.github.io/","keywords":null,"description":"haolees blogs","author":{"@type":"Person","name":"haolee","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://conf-haolee.github.io/","description":"haolees blogs"},"publisher":{"@type":"Organization","name":"cvhao's library","url":"https://conf-haolee.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://conf-haolee.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"机器视觉：相机视野（FOV）与工作距离（WD）计算指南","description":"\n面向视觉工程师的实用笔记：从光学原理 → 工程公式 → 实际项目计算\n","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://conf-haolee.github.io/2026/02/10/%E5%B7%A5%E4%BD%9C/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%EF%BC%9A%E7%9B%B8%E6%9C%BA%E8%A7%86%E9%87%8E%EF%BC%88FOV%EF%BC%89%E4%B8%8E%E5%B7%A5%E4%BD%9C%E8%B7%9D%E7%A6%BB%EF%BC%88WD%EF%BC%89%E8%AE%A1%E7%AE%97%E6%8C%87%E5%8D%97/"},"author":{"@type":"Person","name":"haolee","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://conf-haolee.github.io/"},"publisher":{"@type":"Organization","name":"cvhao's library","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://conf-haolee.github.io/2026/02/10/%E5%B7%A5%E4%BD%9C/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%EF%BC%9A%E7%9B%B8%E6%9C%BA%E8%A7%86%E9%87%8E%EF%BC%88FOV%EF%BC%89%E4%B8%8E%E5%B7%A5%E4%BD%9C%E8%B7%9D%E7%A6%BB%EF%BC%88WD%EF%BC%89%E8%AE%A1%E7%AE%97%E6%8C%87%E5%8D%97/","wordCount":36,"datePublished":"2026-02-09T16:00:00.000Z","dateModified":"2026-04-11T02:44:49.598Z","articleSection":"工作","keywords":"机器视觉,调试","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

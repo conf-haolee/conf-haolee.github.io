@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
     <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/#6.0.0-alpha.1'>
   <meta name="generator" content="Hexo 6.3.0">
   <meta name="Volantis" content="6.0.0-alpha.1">
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2026/03/14/工作/机器视觉-ecc200二维码读码等级原理详解（iso15415--dpm标准）/"/>
+  <link rel="canonical" href="https://conf-haolee.github.io/2026/03/14/工作/机器视觉-ecc200二维码读码等级原理详解（iso15415--dpm标准）/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -42,10 +42,10 @@ ECC200二维码的等级评估不是根据外观判断，而是按照ISO标准�
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="ECC200二维码读码等级原理详解（ISO15415 &#x2F; DPM标准）">
-<meta property="og:url" content="http://example.com/2026/03/14/%E5%B7%A5%E4%BD%9C/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89-ECC200%E4%BA%8C%E7%BB%B4%E7%A0%81%E8%AF%BB%E7%A0%81%E7%AD%89%E7%BA%A7%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3%EF%BC%88ISO15415--DPM%E6%A0%87%E5%87%86%EF%BC%89/index.html">
+<meta property="og:url" content="https://conf-haolee.github.io/2026/03/14/%E5%B7%A5%E4%BD%9C/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89-ECC200%E4%BA%8C%E7%BB%B4%E7%A0%81%E8%AF%BB%E7%A0%81%E7%AD%89%E7%BA%A7%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3%EF%BC%88ISO15415--DPM%E6%A0%87%E5%87%86%EF%BC%89/index.html">
 <meta property="og:site_name" content="cvhao&#39;s library">
 <meta property="og:description" content="ECC200二维码的等级评估不是根据外观判断，而是按照ISO标准，通过对比度、网格偏差、模块质量等指标计算得出。如果这些指标都达到A级，即使模块形状不规则，系统仍然认为该二维码具有很高的机器读取可靠性。">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2026-03-13T16:00:00.000Z">
 <meta property="article:modified_time" content="2026-04-11T02:44:49.601Z">
@@ -1749,9 +1749,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		'}'+
 	'</style>'+
     '<div class="kill-ie">'+
-        `<span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>`+
-        `<span class="kill-c">Microsoft has terminated support for Internet Explorer (IE) 10 and earlier versions in 2016. <br/>There are great security risks to continue using it. Please use contemporary mainstream browsers to access.</span><br/>`+
-        `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>Learn more ></strong></a>`+
+        `<span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>`+
+        `<span class="kill-c">微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</span><br/>`+
+        `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>了解详情 ></strong></a>`+
     '</div>');
 </script>
 
@@ -1779,9 +1779,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		}
 	</style>
     <div class="kill-noscript">
-        <span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>
-        <span class="kill-c">This page requires browser support (enable) JavaScript</span><br/>
-        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>Learn more ></strong></a>
+        <span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>
+        <span class="kill-c">本页面需要浏览器支持（启用）JavaScript</span><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
     </div>
 </noscript>
 
@@ -2163,7 +2163,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1775899934310),
+    lastupdate: new Date(1775952653052),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2171,7 +2171,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       fancybox_js: 'https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/4.0.31/fancybox.umd.min.js'
     },
     sidebar: {
-      for_page: ["blogger","category","tagcloud","donate","webinfo"],
+      for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
       webinfo: {
         lastupd: {
@@ -2201,8 +2201,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     languages: {
       
         search: {
-          hits_empty: "We didn't find any results for the search: ${query}.",
-          hits_stats: "${hits} results found in ${time} ms",
+          hits_empty: "找不到您查询的内容：${query}",
+          hits_stats: "找到 ${hits} 条结果，用时 ${time} 毫秒",
         }
       
     }
@@ -2480,7 +2480,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2026/03/14/工作/机器视觉-ECC200二维码读码等级原理详解（ISO15415--DPM标准）/">
+  <link itemprop="mainEntityOfPage" href="https://conf-haolee.github.io/2026/03/14/工作/机器视觉-ECC200二维码读码等级原理详解（ISO15415--DPM标准）/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="cvhao's library">
   </span>
@@ -2544,7 +2544,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2026-03-14T00:00:00+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Mar 14, 2026</p>
+    <p>发布于：2026年3月14日</p>
   </a>
 </div>
 
@@ -2653,8 +2653,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>DataMatrix</li>
 </ul>
 <p>其核心能力是：</p>
-<pre><code>即使二维码有部分损坏，仍然可以恢复完整数据
-</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">即使二维码有部分损坏，仍然可以恢复完整数据<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>例如：</p>
 <table>
 <thead>
@@ -2681,8 +2681,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </tr>
 </tbody></table>
 <p>意味着：</p>
-<pre><code>约30%甚至更多的模块损坏仍然可以恢复数据
-</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">约30%甚至更多的模块损坏仍然可以恢复数据<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>因此在工业现场，经常会出现：</p>
 <ul>
 <li>模块模糊</li>
@@ -2744,8 +2744,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </tr>
 </tbody></table>
 <p>在工业生产中：</p>
-<pre><code>通常要求 ≥ B等级
-</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">通常要求 ≥ B等级<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>A 等级通常已经说明二维码质量非常好。</p>
 <hr>
 <h2 id="四、ISO15415实际检测哪些指标"><a href="#四、ISO15415实际检测哪些指标" class="headerlink" title="四、ISO15415实际检测哪些指标"></a>四、ISO15415实际检测哪些指标</h2><p>ISO标准并不是根据 <strong>二维码好不好看</strong> 来评分，而是根据一系列 <strong>量化指标</strong>。</p>
@@ -2783,8 +2783,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </tr>
 </tbody></table>
 <p>最终等级的计算方式：</p>
-<pre><code>最终等级 = 所有指标中的最低值
-</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">最终等级 &#x3D; 所有指标中的最低值<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>例如：</p>
 <table>
 <thead>
@@ -2811,8 +2811,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </tr>
 </tbody></table>
 <p>最终结果：</p>
-<pre><code>min = 3.7 → A等级
-</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">min &#x3D; 3.7 → A等级<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <hr>
 <h2 id="五、为什么看起来差仍然是-A-等级"><a href="#五、为什么看起来差仍然是-A-等级" class="headerlink" title="五、为什么看起来差仍然是 A 等级"></a>五、为什么看起来差仍然是 A 等级</h2><img src="https://www.hprt.com/uploads/online_edit_pic/20240415/1713169669162097.png" class="lazyload" data-srcset="https://www.hprt.com/uploads/online_edit_pic/20240415/1713169669162097.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="https://www.hprt.com/uploads/online_edit_pic/20240415/1713169669162097.png" style="zoom:33%;" />
 
@@ -2829,14 +2829,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>表面粗糙</li>
 </ul>
 <p>但只要满足以下条件：</p>
-<pre><code>模块中心位置正确
+<pre class="line-numbers language-none"><code class="language-none">模块中心位置正确
 黑白对比度足够
-网格结构完整
-</code></pre>
+网格结构完整<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
 <p>视觉系统仍然可以稳定识别。</p>
 <p>因此：</p>
-<pre><code>ISO评分仍然可能是 A等级
-</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">ISO评分仍然可能是 A等级<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <hr>
 <h2 id="六、什么时候读码等级会下降"><a href="#六、什么时候读码等级会下降" class="headerlink" title="六、什么时候读码等级会下降"></a>六、什么时候读码等级会下降</h2><p>以下情况会明显降低二维码质量等级：</p>
 <h3 id="1-对比度不足"><a href="#1-对比度不足" class="headerlink" title="1 对比度不足"></a>1 对比度不足</h3><p><img src="https://www.automate.org/userAssets/aiaUploads/image/Figure3v2.jpg" class="lazyload" data-srcset="https://www.automate.org/userAssets/aiaUploads/image/Figure3v2.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="https://www.automate.org/userAssets/aiaUploads/image/Figure3v2.jpg"></p>
@@ -2851,8 +2851,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <hr>
 <h3 id="2-定位边损坏"><a href="#2-定位边损坏" class="headerlink" title="2 定位边损坏"></a>2 定位边损坏</h3><p>DataMatrix 的 <strong>L 型定位边</strong>非常关键。</p>
 <p>如果损坏：</p>
-<pre><code>定位失败 → 等级下降
-</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">定位失败 → 等级下降<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <hr>
 <h3 id="3-网格变形"><a href="#3-网格变形" class="headerlink" title="3 网格变形"></a>3 网格变形</h3><p>例如：</p>
 <ul>
@@ -2861,8 +2861,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>倾斜</li>
 </ul>
 <p>会导致：</p>
-<pre><code>Grid Non-Uniformity 降低
-</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">Grid Non-Uniformity 降低<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <hr>
 <h3 id="4-模块粘连"><a href="#4-模块粘连" class="headerlink" title="4 模块粘连"></a>4 模块粘连</h3><p>例如：</p>
 <ul>
@@ -2870,12 +2870,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>激光过烧</li>
 </ul>
 <p>会导致：</p>
-<pre><code>Modulation下降
-</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">Modulation下降<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <hr>
 <h2 id="七、人眼标准-vs-机器标准"><a href="#七、人眼标准-vs-机器标准" class="headerlink" title="七、人眼标准 vs 机器标准"></a>七、人眼标准 vs 机器标准</h2><p>很多客户的误解来自：</p>
-<pre><code>人眼标准 ≠ 机器识别标准
-</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">人眼标准 ≠ 机器识别标准<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>客户通常关注：</p>
 <ul>
 <li>是否圆</li>
@@ -2883,24 +2883,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>是否清晰</li>
 </ul>
 <p>但 ISO 标准关注的是：</p>
-<pre><code>机器是否能稳定读取
-</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">机器是否能稳定读取<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>因此：</p>
-<pre><code>外观不好 ≠ 读码质量差
-</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">外观不好 ≠ 读码质量差<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <hr>
 <h2 id="八、工业现场解释方法"><a href="#八、工业现场解释方法" class="headerlink" title="八、工业现场解释方法"></a>八、工业现场解释方法</h2><p>如果客户质疑等级，可以用一个非常容易理解的比喻：</p>
 <p>ECC200 就像：</p>
-<pre><code>带自动纠错的文件
-</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">带自动纠错的文件<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>即使文件部分损坏：</p>
 <ul>
 <li>数据仍然可以恢复</li>
 <li>不影响读取</li>
 </ul>
 <p>因此系统判定为：</p>
-<pre><code>读取可靠
-</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">读取可靠<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <hr>
 <h2 id="九、读码软件建议功能"><a href="#九、读码软件建议功能" class="headerlink" title="九、读码软件建议功能"></a>九、读码软件建议功能</h2><p>一个专业的读码软件应该提供：</p>
 <table>
@@ -2949,8 +2949,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </tr>
 </tbody></table>
 <p>最终：</p>
-<pre><code>A级
-</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">A级<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>很多工业设备都提供类似报告：</p>
 <ul>
 <li>Cognex</li>
@@ -2960,14 +2960,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <hr>
 <h2 id="十、机器视觉工程经验"><a href="#十、机器视觉工程经验" class="headerlink" title="十、机器视觉工程经验"></a>十、机器视觉工程经验</h2><p>工业现场通常要求：</p>
-<pre><code>≥ B等级
-</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">≥ B等级<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>A等级通常意味着：</p>
-<pre><code>二维码质量已经非常优秀
-</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">二维码质量已经非常优秀<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>因此如果系统检测为 <strong>A级</strong>，通常说明：</p>
-<pre><code>打码质量符合甚至高于工业标准
-</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">打码质量符合甚至高于工业标准<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <hr>
 <h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>ECC200 之所以成为工业追溯领域最重要的二维码标准，核心原因在于：</p>
 <ul>
@@ -2977,9 +2977,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <p>理解 ECC200 的读码等级原理，对于机器视觉工程师来说是一个非常重要的基础知识。</p>
 <p>在实际项目中：</p>
-<pre><code>读码等级 ≠ 外观质量
-读码等级 = 机器读取可靠性
-</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">读码等级 ≠ 外观质量
+读码等级 &#x3D; 机器读取可靠性<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
 <p>只有理解这一点，才能正确解释客户现场遇到的问题。</p>
 <blockquote>
 <p>参考链接</p>
@@ -2997,6 +2997,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
       <!-- 版权声明组件 -->
       
+        
+          <div class='copyright'>
+            <blockquote>
+              
+                
+                  <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+                
+              
+                
+                  <p>本文永久链接是：<a href="https://conf-haolee.github.io/2026/03/14/工作/机器视觉-ECC200二维码读码等级原理详解（ISO15415--DPM标准）/">https://conf-haolee.github.io/2026/03/14/工作/机器视觉-ECC200二维码读码等级原理详解（ISO15415--DPM标准）/</a></p>
+                
+              
+            </blockquote>
+          </div>
+        
+      
       <!-- 打赏组件 -->
       
     </div>
@@ -3012,7 +3029,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <div class="new-meta-item date" itemprop="dateModified" datetime="2026-04-11T10:44:49+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Apr 11, 2026</p>
+    <p>更新于：2026年4月11日</p>
   </a>
 </div>
 
@@ -3038,7 +3055,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2026/03/14/%E5%B7%A5%E4%BD%9C/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89-ECC200%E4%BA%8C%E7%BB%B4%E7%A0%81%E8%AF%BB%E7%A0%81%E7%AD%89%E7%BA%A7%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3%EF%BC%88ISO15415--DPM%E6%A0%87%E5%87%86%EF%BC%89/&title=ECC200二维码读码等级原理详解（ISO15415 / DPM标准） - cvhao's library&summary=
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://conf-haolee.github.io/2026/03/14/%E5%B7%A5%E4%BD%9C/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89-ECC200%E4%BA%8C%E7%BB%B4%E7%A0%81%E8%AF%BB%E7%A0%81%E7%AD%89%E7%BA%A7%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3%EF%BC%88ISO15415--DPM%E6%A0%87%E5%87%86%EF%BC%89/&title=ECC200二维码读码等级原理详解（ISO15415 / DPM标准） - cvhao's library&summary=
 ECC200二维码的等级评估不是根据外观判断，而是按照ISO标准，通过对比度、网格偏差、模块质量等指标计算得出。如果这些指标都达到A级，即使模块形状不规则，系统仍然认为该二维码具有很高的机器读取可靠性。
 "
           
@@ -3052,7 +3069,7 @@ ECC200二维码的等级评估不是根据外观判断，而是按照ISO标准�
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2026/03/14/%E5%B7%A5%E4%BD%9C/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89-ECC200%E4%BA%8C%E7%BB%B4%E7%A0%81%E8%AF%BB%E7%A0%81%E7%AD%89%E7%BA%A7%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3%EF%BC%88ISO15415--DPM%E6%A0%87%E5%87%86%EF%BC%89/&title=ECC200二维码读码等级原理详解（ISO15415 / DPM标准） - cvhao's library&summary=
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://conf-haolee.github.io/2026/03/14/%E5%B7%A5%E4%BD%9C/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89-ECC200%E4%BA%8C%E7%BB%B4%E7%A0%81%E8%AF%BB%E7%A0%81%E7%AD%89%E7%BA%A7%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3%EF%BC%88ISO15415--DPM%E6%A0%87%E5%87%86%EF%BC%89/&title=ECC200二维码读码等级原理详解（ISO15415 / DPM标准） - cvhao's library&summary=
 ECC200二维码的等级评估不是根据外观判断，而是按照ISO标准，通过对比度、网格偏差、模块质量等指标计算得出。如果这些指标都达到A级，即使模块形状不规则，系统仍然认为该二维码具有很高的机器读取可靠性。
 "
           
@@ -3066,7 +3083,7 @@ ECC200二维码的等级评估不是根据外观判断，而是按照ISO标准�
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2026/03/14/%E5%B7%A5%E4%BD%9C/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89-ECC200%E4%BA%8C%E7%BB%B4%E7%A0%81%E8%AF%BB%E7%A0%81%E7%AD%89%E7%BA%A7%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3%EF%BC%88ISO15415--DPM%E6%A0%87%E5%87%86%EF%BC%89/&title=ECC200二维码读码等级原理详解（ISO15415 / DPM标准） - cvhao's library&summary=
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://conf-haolee.github.io/2026/03/14/%E5%B7%A5%E4%BD%9C/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89-ECC200%E4%BA%8C%E7%BB%B4%E7%A0%81%E8%AF%BB%E7%A0%81%E7%AD%89%E7%BA%A7%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3%EF%BC%88ISO15415--DPM%E6%A0%87%E5%87%86%EF%BC%89/&title=ECC200二维码读码等级原理详解（ISO15415 / DPM标准） - cvhao's library&summary=
 ECC200二维码的等级评估不是根据外观判断，而是按照ISO标准，通过对比度、网格偏差、模块质量等指标计算得出。如果这些指标都达到A级，即使模块形状不规则，系统仍然认为该二维码具有很高的机器读取可靠性。
 "
           
@@ -3101,13 +3118,12 @@ ECC200二维码的等级评估不是根据外观判断，而是按照ISO标准�
   
     <div class="prev-next">
       
-        <a class='prev' href='/2026/04/11/%E5%AD%A6%E4%B9%A0/C++%20word%E8%AF%BB%E5%86%99%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>C++ 实现word读写</p>
-          <p class='content'>C++(Qt) 和 Word、Excel、PDF 交互总结 - kevinlq - 博客园 (cnblogs.com)
+        <a class='prev' href='/2026/04/11/%E7%94%9F%E6%B4%BB/%E3%80%8A%E7%A5%9E%E9%80%BB%E8%BE%91%E3%80%8B%E7%A0%B4%E8%A7%A3%E9%80%BB%E8%BE%91%E7%BC%AA%E8%AF%AF%EF%BC%8C%E5%8F%8D%E6%9D%80%E6%9D%A0%E7%B2%BE/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>《神逻辑》破解逻辑缪误，分辨诡辩，反杀杠精</p>
+          <p class='content'>预设谬误：为什么胖的人都比较懒？
 
 
-1. XML 模板替换 标签替换
-事先编辑好一份 Word 模板，需要...</p>
+破解逻辑缪误，分辨诡辩，反杀杠精【嘴笨的人进来学，如何一句话反杀杠精，破解有毒逻辑，见招拆招、以杠治杠】 https://www.bilibili.com/...</p>
         </a>
       
       
@@ -3238,7 +3254,7 @@ ECC200二维码的等级评估不是根据外观判断，而是按照ISO标准�
       
     
       
-        <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+        <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
 </div>
       
     
@@ -3800,7 +3816,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"cvhao's library","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"haolee","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"haolees blogs"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"cvhao's library"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/工作/","name":"工作"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/工作/机器视觉/","name":"机器视觉"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2026/03/14/工作/机器视觉-ECC200二维码读码等级原理详解（ISO15415--DPM标准）/","name":"ECC200二维码读码等级原理详解（ISO15415 / DPM标准）"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"cvhao's library","url":"http://example.com/","keywords":null,"description":"haolees blogs","author":{"@type":"Person","name":"haolee","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"haolees blogs"},"publisher":{"@type":"Organization","name":"cvhao's library","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"ECC200二维码读码等级原理详解（ISO15415 / DPM标准）","description":"\nECC200二维码的等级评估不是根据外观判断，而是按照ISO标准，通过对比度、网格偏差、模块质量等指标计算得出。如果这些指标都达到A级，即使模块形状不规则，系统仍然认为该二维码具有很高的机器读取可靠性。\n","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2026/03/14/%E5%B7%A5%E4%BD%9C/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89-ECC200%E4%BA%8C%E7%BB%B4%E7%A0%81%E8%AF%BB%E7%A0%81%E7%AD%89%E7%BA%A7%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3%EF%BC%88ISO15415--DPM%E6%A0%87%E5%87%86%EF%BC%89/"},"author":{"@type":"Person","name":"haolee","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"cvhao's library","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2026/03/14/%E5%B7%A5%E4%BD%9C/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89-ECC200%E4%BA%8C%E7%BB%B4%E7%A0%81%E8%AF%BB%E7%A0%81%E7%AD%89%E7%BA%A7%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3%EF%BC%88ISO15415--DPM%E6%A0%87%E5%87%86%EF%BC%89/","wordCount":103,"datePublished":"2026-03-13T16:00:00.000Z","dateModified":"2026-04-11T02:44:49.601Z","articleSection":"工作","keywords":"机器视觉,ECC200","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"cvhao's library","url":"https://conf-haolee.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"haolee","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://conf-haolee.github.io/","sameAs":["https://github.com/volantis-x"],"description":"haolees blogs"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://conf-haolee.github.io/","name":"cvhao's library"}},{"@type":"ListItem","position":2,"item":{"@id":"https://conf-haolee.github.io/categories/工作/","name":"工作"}},{"@type":"ListItem","position":2,"item":{"@id":"https://conf-haolee.github.io/categories/工作/机器视觉/","name":"机器视觉"}},{"@type":"ListItem","position":3,"item":{"@id":"https://conf-haolee.github.io/2026/03/14/工作/机器视觉-ECC200二维码读码等级原理详解（ISO15415--DPM标准）/","name":"ECC200二维码读码等级原理详解（ISO15415 / DPM标准）"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"cvhao's library","url":"https://conf-haolee.github.io/","keywords":null,"description":"haolees blogs","author":{"@type":"Person","name":"haolee","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://conf-haolee.github.io/","description":"haolees blogs"},"publisher":{"@type":"Organization","name":"cvhao's library","url":"https://conf-haolee.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://conf-haolee.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"ECC200二维码读码等级原理详解（ISO15415 / DPM标准）","description":"\nECC200二维码的等级评估不是根据外观判断，而是按照ISO标准，通过对比度、网格偏差、模块质量等指标计算得出。如果这些指标都达到A级，即使模块形状不规则，系统仍然认为该二维码具有很高的机器读取可靠性。\n","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://conf-haolee.github.io/2026/03/14/%E5%B7%A5%E4%BD%9C/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89-ECC200%E4%BA%8C%E7%BB%B4%E7%A0%81%E8%AF%BB%E7%A0%81%E7%AD%89%E7%BA%A7%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3%EF%BC%88ISO15415--DPM%E6%A0%87%E5%87%86%EF%BC%89/"},"author":{"@type":"Person","name":"haolee","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://conf-haolee.github.io/"},"publisher":{"@type":"Organization","name":"cvhao's library","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://conf-haolee.github.io/2026/03/14/%E5%B7%A5%E4%BD%9C/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89-ECC200%E4%BA%8C%E7%BB%B4%E7%A0%81%E8%AF%BB%E7%A0%81%E7%AD%89%E7%BA%A7%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3%EF%BC%88ISO15415--DPM%E6%A0%87%E5%87%86%EF%BC%89/","wordCount":103,"datePublished":"2026-03-13T16:00:00.000Z","dateModified":"2026-04-11T02:44:49.601Z","articleSection":"工作","keywords":"机器视觉,ECC200","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

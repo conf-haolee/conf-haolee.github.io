@@ -6834,10 +6834,15 @@ pre::-webkit-scrollbar-thumb:hover {
   -webkit-border-radius: 6px;
   box-shadow: none;
   -webkit-box-shadow: none;
+  -webkit-box-shadow: none;
   color: var(--code-text);
+  color-scheme: light dark;
   font-family: "Cascadia Code", "JetBrains Mono", "Microsoft YaHei", monospace;
   font-size: 14px;
   line-height: 1.7;
+  text-shadow: none !important;
+  filter: none !important;
+  -webkit-filter: none !important;
 }
 [color-scheme='dark'] .code-toolbar {
   --code-bg: #111318;
@@ -6852,10 +6857,33 @@ pre::-webkit-scrollbar-thumb:hover {
   --code-number: #f78c6c;
   --code-type: #ffcb6b;
 }
+@media (prefers-color-scheme: dark) {
+  :root:not([color-scheme]) .code-toolbar {
+    --code-bg: #111318;
+    --code-header: #171a20;
+    --code-border: #2a2f38;
+    --code-text: #d7dae0;
+    --code-line-number: #626975;
+    --code-comment: #7f8c8d;
+    --code-keyword: #c792ea;
+    --code-string: #c3e88d;
+    --code-function: #82aaff;
+    --code-number: #f78c6c;
+    --code-type: #ffcb6b;
+  }
+}
 /* Compact header: language at left; existing copy control at right. */
 .code-toolbar::before,
 .code-toolbar::after {
   content: none;
+}
+.code-toolbar,
+.code-toolbar *,
+.code-toolbar pre,
+.code-toolbar code {
+  text-shadow: none !important;
+  filter: none !important;
+  -webkit-filter: none !important;
 }
 .code-toolbar pre,
 .code-toolbar code {
@@ -6874,6 +6902,7 @@ pre::-webkit-scrollbar-thumb:hover {
   border-radius: 0;
   -webkit-border-radius: 0;
   box-shadow: none;
+  -webkit-box-shadow: none;
   -webkit-box-shadow: none;
 }
 /* Prism supplies the language class; CSS turns it into the header label. */
@@ -6903,6 +6932,7 @@ pre::-webkit-scrollbar-thumb:hover {
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.01em;
+  text-shadow: none !important;
 }
 .code-toolbar pre.language-cpp::before,
 .code-toolbar pre[data-language='C++']::before {
@@ -6932,6 +6962,14 @@ pre::-webkit-scrollbar-thumb:hover {
 .code-toolbar pre[data-language='Prompt']::before {
   content: "Prompt";
 }
+.code-toolbar pre.language-text::before,
+.code-toolbar pre.language-plain::before,
+.code-toolbar pre.language-plaintext::before,
+.code-toolbar pre[data-language='text']::before,
+.code-toolbar pre[data-language='plain']::before,
+.code-toolbar pre[data-language='plaintext']::before {
+  content: "Prompt";
+}
 /* Preserve the existing copy behavior; only present its state more cleanly. */
 .code-toolbar .btn-copy {
   z-index: 3;
@@ -6951,6 +6989,7 @@ pre::-webkit-scrollbar-thumb:hover {
   border-radius: 4px;
   -webkit-border-radius: 4px;
   box-shadow: none;
+  -webkit-box-shadow: none;
   -webkit-box-shadow: none;
   color: var(--code-line-number);
   background: transparent;
@@ -6984,6 +7023,12 @@ pre::-webkit-scrollbar-thumb:hover {
 .code-toolbar .gutter pre,
 .code-toolbar .line-numbers-rows > span::before {
   color: var(--code-line-number) !important;
+  text-shadow: none !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+}
+.code-toolbar .line-numbers-rows {
+  border-right-color: var(--code-border) !important;
 }
 .code-toolbar .token.comment,
 .code-toolbar .token.prolog,

@@ -7063,3 +7063,174 @@ pre::-webkit-scrollbar-thumb:hover {
 .code-toolbar .token.namespace {
   color: var(--code-type);
 }
+/* Article PDF export */
+.cvh-export-pdf {
+  position: fixed;
+  right: 24px;
+  bottom: 96px;
+  z-index: 99;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-inline-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-inline-flex /* NEW - Chrome */;
+  display: inline-flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -khtml-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  min-width: 96px;
+  height: 36px;
+  padding: 0 14px;
+  border: 1px solid #d8dee4;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  background: #fff;
+  color: #24292f;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  font-family: "Cascadia Code", "JetBrains Mono", "Microsoft YaHei", monospace;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+}
+.cvh-export-pdf:hover,
+.cvh-export-pdf:focus-visible {
+  background: #f6f8fa;
+  border-color: #8c959f;
+  outline: none;
+}
+[color-scheme='dark'] .cvh-export-pdf {
+  background: #171a20;
+  border-color: #2a2f38;
+  color: #d7dae0;
+}
+[color-scheme='dark'] .cvh-export-pdf:hover,
+[color-scheme='dark'] .cvh-export-pdf:focus-visible {
+  background: #111318;
+  border-color: #626975;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([color-scheme]) .cvh-export-pdf {
+    background: #171a20;
+    border-color: #2a2f38;
+    color: #d7dae0;
+  }
+  :root:not([color-scheme]) .cvh-export-pdf:hover,
+  :root:not([color-scheme]) .cvh-export-pdf:focus-visible {
+    background: #111318;
+    border-color: #626975;
+  }
+}
+.cvh-print-source {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+}
+@media print {
+  @page {
+    margin: 16mm 14mm;
+  }
+  html,
+  body {
+    background: #fff !important;
+    color: #24292f !important;
+  }
+  #l_header,
+  #l_cover,
+  #l_side,
+  #comments,
+  #safearea,
+  footer,
+  .sidebar,
+  .side,
+  .widgets,
+  .top,
+  .rightmenu,
+  .float-panel,
+  .aplayer,
+  .cvh-export-pdf,
+  .article-meta#bottom,
+  .prev-next {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: none !important;
+  }
+  #l_body,
+  #l_main {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: block !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+  }
+  #post.article {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: block !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    color: #24292f !important;
+  }
+  #post-body {
+    color: #24292f !important;
+  }
+  #post-body a {
+    color: #0550ae !important;
+    text-decoration: underline;
+  }
+  #post-body img {
+    max-width: 100% !important;
+    height: auto !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  #post-body table,
+  #post-body pre,
+  #post-body blockquote,
+  .code-toolbar {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .code-toolbar {
+    --code-bg: #f6f8fa;
+    --code-header: #f0f2f5;
+    --code-border: #d8dee4;
+    --code-text: #24292f;
+    --code-line-number: #8c959f;
+    background: var(--code-bg) !important;
+    border-color: var(--code-border) !important;
+  }
+  .code-toolbar .btn-copy {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: none !important;
+  }
+  .cvh-print-source {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: block !important;
+    margin-top: 32px;
+    padding-top: 12px;
+    border-top: 1px solid #d8dee4;
+    color: #6e7781;
+    font-family: "Cascadia Code", "JetBrains Mono", "Microsoft YaHei", monospace;
+    font-size: 11px;
+    line-height: 1.6;
+  }
+}

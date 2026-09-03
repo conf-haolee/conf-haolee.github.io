@@ -2161,7 +2161,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1788421143123),
+    lastupdate: new Date(1788422978780),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2745,12 +2745,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2023/04/13/%E7%94%9F%E6%B4%BB/%E3%80%8A%E4%B8%80%E7%94%9F%E3%80%8B%E8%8E%AB%E6%B3%8A%E6%A1%91/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>生活不会像你想象的那么糟</p>
-          <p class='content'>生活不可能像你想象得那么好，但也不会像你想象得那么糟
+        <a class='prev' href='/2023/04/21/%E5%AD%A6%E4%B9%A0/Qxlsx%20%E5%AE%9E%E7%8E%B0Excel%E8%AF%BB%E5%86%99/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Qxlsx 实现Excel读写</p>
+          <p class='content'>Qxlsx 是一个第三方的Excel文件读写库，使用C++ 与 Qt开发。
 
 
-生活不可能像你想象得那么好，但也不会像你想象得那么糟。我觉得人的脆弱和坚强都超乎自己的想象。有时，我可能脆弱得一句话就泪流满面，有时，也...</p>
+1. 介绍
+Qxlsx 是一个第三方的Excel文件读写库，使用C++ 与 Qt开发。
+由于QtXlsx2014 ...</p>
         </a>
       
       
@@ -3463,6 +3465,33 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     <!-- import body_end end-->
     <!-- Custom Files bodyEnd begin-->
     <link rel="stylesheet" href="/css/style.css?v=codeblocks-20260903-fix2">
+<button class="cvh-export-pdf" type="button" aria-label="Export current article as PDF">Export PDF</button>
+<script>
+  (function () {
+    var post = document.querySelector('#post.article');
+    var button = document.querySelector('.cvh-export-pdf');
+    if (!post || !button) {
+      if (button) button.remove();
+      return;
+    }
+
+    if (!post.querySelector('.cvh-print-source')) {
+      var source = document.createElement('div');
+      source.className = 'cvh-print-source';
+      source.innerHTML = '<div>Author: cvhao</div><div>source: www.cvhao.top</div>';
+      post.appendChild(source);
+    }
+
+    button.addEventListener('click', function () {
+      document.documentElement.classList.add('cvh-printing');
+      window.print();
+    });
+
+    window.addEventListener('afterprint', function () {
+      document.documentElement.classList.remove('cvh-printing');
+    });
+  })();
+</script>
 
     <!-- Custom Files bodyEnd end-->
   </body>

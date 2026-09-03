@@ -2157,7 +2157,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1788421143123),
+    lastupdate: new Date(1788422978780),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -3485,6 +3485,33 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     <!-- import body_end end-->
     <!-- Custom Files bodyEnd begin-->
     <link rel="stylesheet" href="/css/style.css?v=codeblocks-20260903-fix2">
+<button class="cvh-export-pdf" type="button" aria-label="Export current article as PDF">Export PDF</button>
+<script>
+  (function () {
+    var post = document.querySelector('#post.article');
+    var button = document.querySelector('.cvh-export-pdf');
+    if (!post || !button) {
+      if (button) button.remove();
+      return;
+    }
+
+    if (!post.querySelector('.cvh-print-source')) {
+      var source = document.createElement('div');
+      source.className = 'cvh-print-source';
+      source.innerHTML = '<div>Author: cvhao</div><div>source: www.cvhao.top</div>';
+      post.appendChild(source);
+    }
+
+    button.addEventListener('click', function () {
+      document.documentElement.classList.add('cvh-printing');
+      window.print();
+    });
+
+    window.addEventListener('afterprint', function () {
+      document.documentElement.classList.remove('cvh-printing');
+    });
+  })();
+</script>
 
     <!-- Custom Files bodyEnd end-->
   </body>

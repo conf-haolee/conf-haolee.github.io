@@ -2159,7 +2159,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1788421143123),
+    lastupdate: new Date(1788422978780),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2598,7 +2598,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <i class="fa-solid fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\2024\09\29\工作\2025秋招机器视觉公司汇总\" title="2025秋招机器视觉公司汇总" rel="bookmark "><img src="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><span class="title">2025秋招机器视觉公司汇总</span><span class="excerpt">加密文章，输入密码方可查看</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\2024\07\15\工作\404 智能视觉实验室新生指南\" title="404智能视觉实验室新生指南" rel="bookmark "><img src="https://raw.githubusercontent.com/conf-haolee/Images/master/uPic/547c47c82dc85b79d2a6853179d752c7.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/conf-haolee/Images/master/uPic/547c47c82dc85b79d2a6853179d752c7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><span class="title">404智能视觉实验室新生指南</span><span class="excerpt">把时间花在CVPR上面。</span></a></div></section></div>
       
       <!-- 版权声明组件 -->
       
@@ -3439,6 +3439,33 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     <!-- import body_end end-->
     <!-- Custom Files bodyEnd begin-->
     <link rel="stylesheet" href="/css/style.css?v=codeblocks-20260903-fix2">
+<button class="cvh-export-pdf" type="button" aria-label="Export current article as PDF">Export PDF</button>
+<script>
+  (function () {
+    var post = document.querySelector('#post.article');
+    var button = document.querySelector('.cvh-export-pdf');
+    if (!post || !button) {
+      if (button) button.remove();
+      return;
+    }
+
+    if (!post.querySelector('.cvh-print-source')) {
+      var source = document.createElement('div');
+      source.className = 'cvh-print-source';
+      source.innerHTML = '<div>Author: cvhao</div><div>source: www.cvhao.top</div>';
+      post.appendChild(source);
+    }
+
+    button.addEventListener('click', function () {
+      document.documentElement.classList.add('cvh-printing');
+      window.print();
+    });
+
+    window.addEventListener('afterprint', function () {
+      document.documentElement.classList.remove('cvh-printing');
+    });
+  })();
+</script>
 
     <!-- Custom Files bodyEnd end-->
   </body>

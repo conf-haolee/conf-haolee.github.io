@@ -2157,7 +2157,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1788920755025),
+    lastupdate: new Date(1788942522433),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2578,9 +2578,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md article-desc' itemprop="articleBody">
     
-      <p>随着大语言模型逐渐参与软件开发，使用 AI 生成、修改和重构用户界面已经成为常见的开发方式。但在实际项目中，不同 UI 框架对 AI 的友好程度存在明显差异。</p>
-<p>在工业视觉软件的现场测试中可以观察到：当 AI 直接修改历史复杂的 WinForms 界面时，经常出现控件错位、间距不统一、宽度失控、设计器预览与运行结果不一致等问题；而让 AI 理解原有工具功能后，使用 WPF 重新实现界面，通常能够获得更稳定的布局和更统一的视觉效果。同样，在 Qt 技术体系中，Qt Quick&#x2F;QML 一般也比使用绝对坐标或大量运行时代码控制的 Qt Widgets 更适合 AI 生成和维护。</p>
-<p>这种差异的根本原因，并不只是 WPF 和 QML“更加现代”，而是声明式 UI 能够把界面结构、布局关系、数据绑定和状态变化显式表达出来。它将大量独立坐标和过程性操作，转换为 AI 更容易理解的层级结构和约束规则。</p>
+      <p>AI 修改 UI 的效果，往往取决于界面信息的表达方式。相比坐标式、事件驱动式界面，声明式 UI 更容易把层级、布局、状态和绑定关系直接暴露给模型。</p>
+<p>本文结合 WinForms、WPF、Qt Widgets 和 Qt Quick&#x2F;QML，讨论为什么 AI 更适合维护声明式界面，以及这一结论在工业视觉软件中的边界。</p>
+<div align="center">
+<img src="https://raw.githubusercontent.com/conf-haolee/Images/master/PicGoImg20260909162744224.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/conf-haolee/Images/master/PicGoImg20260909162744224.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400px" />
+</div>
     
   </div>
   
@@ -2816,7 +2818,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>110.2k 字</div>
+          <div>108.5k 字</div>
         </div>
       
 
